@@ -136,6 +136,21 @@ jQuery(document).ready(function($) {
     })
 
 
+    $('.slider-control').on('click mouseover', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        var index = $(this).attr('data-index');
+        var slider = $(this).parents('.slider');
+
+        $(this).siblings('.slider-control').removeClass('active');
+        $(this).addClass('active');
+
+        slider.find('.slide').removeClass('active');
+        slider.find('.slide-' + index).addClass('active');
+    });
+
+
 
     /*---------------------------
                                   Form submit
