@@ -1,5 +1,14 @@
 .header
-
+	
+	.header-container
+		width: 1800px
+		max-width: 100%
+		padding: 0 30px 
+		margin: 0 auto
+		
+		@media (max-width: 1500px)
+			padding: 0 15px
+			
 	&-top
 		font-family: $f
 		font-size: 14px
@@ -90,15 +99,58 @@
 				&:hover,
 				&.current
 					text-decoration: underline
-		
-	.header-container
-		width: 1800px
-		max-width: 100%
-		padding: 0 30px 
-		
-		@media (max-width: 1500px)
-			padding: 0 15px
-		
+
+
+	&-middle
+		padding: 20px 0
+		background-color: #fff
+		 
+		.header-container
+			display: flex
+			align-items: center
+			
+			@media (min-width: 1501px)
+				padding: 0
+			
+		.logo
+			width: 315px
+			padding-left: 30px
+			
+			@media (max-width: 1500px)
+				padding-left: 0
+				width: 300px
+			
+
+		.search
+			width: 500px
+			
+			@media (max-width: 1600px)
+				width: 400px
+			
+
+		.user-controls
+			width: -webkit-calc(100% - 815px)
+			width: calc(100% - 815px)
+			display: flex
+			align-items: center
+			justify-content: flex-end
+			
+			@media (max-width: 1600px)
+				width: -webkit-calc(100% - 700px)
+				width: calc(100% - 700px)
+			
+			.user-lists
+				font-size: 14px
+				padding-right: 30px 
+				
+				@media (max-width: 1600px)
+					padding-right: 20px 
+				
+			.profile-button
+				padding-left: 40px 
+				
+				@media (max-width: 1600px)
+					padding-left: 20px 
 
 
 .site-menu
@@ -127,3 +179,175 @@
 			&:hover,
 			&.active
 				text-decoration: underline
+				
+
+.search
+	form
+		position: relative
+		
+	input
+		width: 100%
+		display: block
+		height: 50px
+		border-radius: 25px
+		padding: 0 75px 0 25px
+		border: 1px solid #CACACA
+		font-family: $f
+		font-size: 14px
+		
+		+placeholder
+			opacity: 0.5
+			
+	button
+		width: 50px
+		height: 50px
+		position: absolute
+		top: 0
+		right: 0
+		border-radius: 50%
+		transition: all 0.3s ease
+		cursor: pointer
+		font-size: 20px
+		color: $lilac
+		opacity: 0.5 
+		border: 0
+		background-color: transparent
+		
+		&:hover
+			background-color: $lilac
+			color: #fff
+			opacity: 1 
+			
+.user-lists 
+	a
+		display: inline-block
+		color: $text
+		transition: all 0.3s ease
+		
+		& + a
+			margin-left: 30px 
+			
+			@media (max-width: 1600px)
+				margin-left: 20px 
+			
+			@media (max-width: 1500px)
+				margin-left: 15px 
+		
+		&:hover,
+		&:hover .icon
+			text-decoration: none
+			color: $blue-00
+		
+		span
+			vertical-align: middle 
+		
+		.icon
+			color: $blue-25
+			margin-right: 5px 
+			font-size: 20px 
+			transition: all 0.3s ease
+			
+			@media (max-width: 1600px)
+				font-size: 18px
+				margin-right: 4px  
+			
+
+
+.basket-link
+	display: flex
+	height: 50px
+	color: #fff
+	border-radius: 25px
+	background-color: $lilac 
+	align-items: center
+	padding: 0 25px
+	font-size: 14px
+	transition: all 0.3s ease
+	position: relative
+	
+	@media (max-width: 1500px)
+		padding: 0
+		width: 50px
+		justify-content: center
+	
+	&:hover
+		text-decoration: none
+		color: #fff
+		background-color: $lilac-dark 
+	
+	.counter
+		white-space: nowrap
+		padding-right: 10px 
+		
+		@media (max-width: 1500px)
+			padding-right: 0
+			 
+			.label
+				display: none
+				
+			.number
+				width: 18px
+				height: 18px
+				position: absolute
+				top: 0
+				right: 0;
+				border-radius: 50%
+				background-color: $blue-25 
+				display: flex
+				align-items: center
+				justify-content: center
+				font-size: 12px 
+		
+	.icon
+		opacity: 0.5
+		font-size: 20px 
+		
+
+.profile-button
+	display: flex
+	align-items: center
+	padding-right: 30px
+	position: relative
+	
+	&:hover
+		text-decoration: none
+		
+	@media (max-width: 1500px)
+		padding-right: 15px 
+	
+	.user-name
+		color: $text
+		padding-right: 10px 
+		max-width: 100px
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis 
+		
+		@media (max-width: 1500px)
+			font-size: 14px 
+	
+	.user-icon
+		width: 50px
+		height: 50px
+		border: 1px dashed $blue-55
+		border-radius: 50%
+		position: relative
+		
+		.icon
+			position: absolute
+			top: 50%
+			left: 50%
+			font-size: 20px 
+			transform: translate(-50%, -50%)
+			transition: all 0.3s ease
+			
+	.fa-angle-down
+		position: absolute
+		top: 50%
+		right: 15px
+		transform: translate(50%, -50%)
+		color: $text
+		
+		@media (max-width: 1500px)
+			right: 0
+			transform: translate(0, -50%)

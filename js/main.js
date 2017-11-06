@@ -126,6 +126,16 @@ jQuery(document).ready(function($) {
     }
 
 
+    /*---------------------------
+                                  Sliders
+    ---------------------------*/
+    $('.offer-slider').slick({
+        fade: true,
+        arrows: false,
+        dots: true
+    })
+
+
 
     /*---------------------------
                                   Form submit

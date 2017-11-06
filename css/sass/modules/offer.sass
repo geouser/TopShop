@@ -1,63 +1,88 @@
 .offer
-	height: 800px
-	max-height: 100%
-	+flex($d: column, $ai: center, $j: center)
-	
-	background-image: url("../images/offer-main.jpg")
-	background-position: 50% 50%
-	-webkit-background-size: cover
-	-o-background-size: cover
-	background-size: cover
-	
-	h1
-		margin-bottom: 40px
-		font-size: 70px
-		color: #FFF
-		text-shadow: 0 0 2px rgba(0,0,0,.2)
-
-
-.offer--slider
-	height: 590px
+	height: 600px
 	position: relative
-	background: #3D8EB9
-	@media (max-width: 600px)
-		height: 500px
-
-	.slick-track,
-	.slick-list
+	
+	&-slider
 		height: 100%
-
-	.slide
-		+flex ($d:column, $ai:center, $j:center)
-		position: absolute
-		left: 0
-		top: 0
-		width: 100%
-		height: 100%
-		background-position: 50% 50%
-		background-repeat: no-repeat
-		-webkit-background-size: cover
-		-o-background-size: cover
-		background-size: cover
-
-		@media (max-width: 800px)
-			padding: 0 30px
-
-		h1,
-		h2
+		margin-bottom: 0!important
+		position: relative 
+		
+		.slick-dots
+			position: absolute
+			bottom: 0
+			right: 0
+			background-color: rgba(255, 255, 255, .2) 
+			width: 30px
+			padding: 5px 0
+			
+			li
+				display: block
+				margin: 0
+				width: 100%
+				height: auto
+				
+				button
+					padding-top: 2px
+					padding-bottom: 2px  
+					color: #fff
+					width: 100%
+					
+					&:before
+						font-size: 12px 
+						display: block
+						position: relative
+						height: 16px
+						color: #fff
+						opacity: 1
+						transition: all 0.3s ease
+						
+			li:hover,
+			li.slick-active
+				button:before
+					color: $blue-00
+		
+		.slick-list,
+		.slick-track
+			height: 100%
+			
+		.slide
+			display: flex
+			align-items: center
+			position: relative
+			z-index: 1 
 			color: #fff
-			font-size: 50px
-			font-weight: 700
-			text-align: center
-
-			@media (max-width: 1200px)
-				font-size: 40px
-
-			@media (max-width: 800px)
-				font-size: 32px
-
-			@media (max-width: 600px)
-				font-size: 30px
-
-		.button
-			margin-top: 16px
+			background-position: 50% 50%
+			background-repeat: no-repeat 
+			background-size: cover 
+			
+			&:before
+				content: ''
+				width: 100%
+				height: 100%
+				position: absolute
+				top: 0
+				left: 0
+				background-color: #000
+				opacity: 0.5
+				z-index: -1  
+			
+			&-container
+				width: 1800px
+				max-width: 100% 
+				padding: 0 15px 0 430px
+				
+			&-content
+				width: 550px
+				max-width: 100% 
+				line-height: normal
+				
+				h2
+					font-size: 48px
+					font-weight: 700  
+					text-transform: uppercase
+					margin-bottom: 15px
+					
+				p
+					font-size: 24px 
+					margin-bottom: 23px 
+				
