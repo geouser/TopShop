@@ -217,6 +217,30 @@ jQuery(document).ready(function($) {
 
 
 
+    /*---------------------------
+                                  Range slider
+    ---------------------------*/
+
+    $('.slider-range').each(function(index, el) {
+        var slider = $(this);
+        var min_input = slider.siblings('.slider-range-inputs').find('.min');
+        var max_input = slider.siblings('.slider-range-inputs').find('.max');
+        slider.slider({
+            range: true,
+            min: slider.attr('data-min')*1,
+            max: slider.attr('data-max')*1,
+            step: 10,
+            values: [ slider.attr('data-min-val')*1, slider.attr('data-max-val')*1 ],
+            change: function( event, ui ) {
+                min_input.val(ui.values[0]);
+                max_input.val(ui.values[1])
+            }
+        });
+        min_input.val( slider.slider( "values", 0 ) );
+        max_input.val( slider.slider( "values", 1 ) );
+    });
+
+
 
 
 

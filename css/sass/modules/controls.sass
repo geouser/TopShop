@@ -80,6 +80,117 @@
 		visibility: visible
 		
 
+
+.custom-control
+	display: inline-flex
+	position: relative
+	font-size: 16px
+	line-height: 1em
+	
+	&.block
+		display: flex
+		width: 100%
+		
+		&:not(:last-child)
+			margin-bottom: 15px 
+			
+		&:last-child
+			margin-bottom: 0
+			 
+	input
+		position: absolute
+		left: 0
+		top: 0
+		z-index: -1
+		opacity: 0 
+		
+	&-indicator
+		width: 13px
+		height: 13px
+		border-radius: 2px
+		border: 1px solid #AFAFAF
+		margin: 1px 0
+		transition: all 0.3s ease
+		
+	&-label
+		width: -webkit-calc(100% - 13px)
+		width: calc(100% - 13px)
+		padding-left: 5px 
+		cursor: pointer
+		
+	input:checked + &-indicator
+		background-color: $blue-55
+		border-color: $blue-55 
+
+
+
+
+.ui-slider
+	width: 100%
+	height: 6px
+	background-color: $blue-55 
+	position: relative
+	margin-bottom: 16px 
+	margin-top: 20px 
+	
+	&:before
+		content: attr(data-min)
+		position: absolute
+		bottom: 100%
+		left: 0
+		color: #747474
+		
+	&:after
+		content: attr(data-max)
+		position: absolute
+		bottom: 100%
+		right: 0
+		color: #747474
+	
+	.ui-slider-range
+		height: 100%
+		background-color: $lilac
+		position: absolute
+		opacity: 0.5
+		
+	.ui-slider-handle
+		width: 9px
+		height: 16px
+		position: absolute
+		top: 100%
+		background-size: 100%
+		background-image: url(../images/handle-right.svg) 
+		cursor: pointer
+		
+		&:first-of-type
+			transform: translateX(-100%)
+			background-image: url(../images/handle-left.svg) 
+
+.slider-range-inputs
+	display: flex
+	align-items: center
+	padding-top: 25px 
+	
+	.currency-area
+		width: 20px
+		text-align: right
+		
+	.input-area
+		display: flex
+		align-items: center
+		width: -webkit-calc(100% - 20px)
+		width: calc(100% - 20px)
+		
+		.devider
+			width: 20px
+			text-align: center
+			
+		input
+			width: -webkit-calc(50% - 10px)
+			width: calc(50% - 10px)
+			padding: 0 5px
+
+
 		
 /* ------------------------------------ */
 /*  SLICK ARROWS  */
