@@ -15,3 +15,185 @@
 			
 			.fa
 				margin-right: 10px
+				
+
+.top-products
+	padding-bottom: 75px 
+	
+.products-tabs
+
+	&__controls
+		background: linear-gradient(to right, $lilac 0%, $blue-00 100%)
+		margin-bottom: 60px 
+		
+		ul
+			margin: 0
+			display: flex
+			justify-content: center
+			padding-top: 20px
+			
+			li
+				list-style: none 
+				margin: 0 8px
+				
+				a
+					display: block
+					background-color: rgba(84, 20, 132, 0.2) 
+					width: 265px
+					border-radius: 5px 5px 0 0
+					text-align: center
+					padding: 17px 0 23px
+					font-family: $f
+					font-size: 24px
+					font-weight: 700 
+					color: #fff  
+					border-top: 5px solid transparent
+					transition: all 0.3s ease
+					
+					&:hover
+						text-decoration: none
+						
+					span
+						border-bottom: 1px dashed #fff
+					
+					.fa
+						margin-right: 5px 
+						
+
+				&.ui-state-hover,
+				&.ui-state-active
+					a
+						background-color: #FFF 
+						color: $lilac
+						border-top-color: $blue-55
+						
+						span
+							border-color: transparent
+							
+
+	.tab
+		.mCustomScrollbar
+			margin: 0 -15px
+			opacity: 0
+			visibility: hidden
+			transition: all 0.3s ease
+			transition-delay: 0.2s
+			//height: 490px
+			
+		&[aria-hidden="false"]
+			.mCustomScrollbar
+				opacity: 1
+				visibility: visible
+			
+		.mCSB_container
+			padding-top: 25px
+			margin-bottom: 10px 
+			 
+			.container
+				margin: 0
+		
+			.row
+				flex-wrap: nowrap
+			
+			.product-card
+				margin-right: 30px 
+				
+		.mCSB_scrollTools_horizontal
+			border-left: 15px solid transparent
+			border-right: 15px solid transparent
+			height: 10px
+			opacity: 1
+						
+			.mCSB_draggerContainer
+				height: 10px
+				
+			.mCSB_draggerRail
+				height: 10px
+				margin: 0
+				border-radius: 0
+				background-color: #E8E0EE
+					
+			.mCSB_dragger
+				height: 10px
+				
+			.mCSB_dragger_bar
+				height: 10px
+				margin: 0
+				background-color: $lilac
+				border-radius: 0 
+				
+			.mCSB_buttonLeft,
+			.mCSB_buttonRight
+				width: 20px
+				height: 10px
+				font: normal normal normal 14px/1 FontAwesome
+				font-size: inherit
+				text-rendering: auto
+				-webkit-font-smoothing: antialiased
+				-moz-osx-font-smoothing: grayscale
+				line-height: 10px 
+				overflow: hidden
+				font-size: 15px
+				color: $lilac 
+				opacity: 1
+				
+			.mCSB_buttonLeft
+				&:before
+					content: '\f104'
+					
+			.mCSB_buttonRight
+				text-align: right
+				
+				&:before
+					content: '\f105'
+					
+
+
+.selection
+	padding: 50px 0 100px
+	background-color: #F5F6F7 
+	
+	h2
+		font-size: 24px
+		font-family: $f
+		color: $lilac   
+		text-align: center
+		margin-bottom: 50px 
+		
+	.must-read,
+	.for-kids,
+	.household-appliances,
+	.smartphones,
+	.games
+		img
+			display: block
+			
+	.must-read,
+	.smartphones
+		margin-bottom: 55px 
+
+	.must-read
+		img
+			margin-left: -18px 
+			margin-top: -11px 
+			
+	.smartphones
+		img
+			margin-left: -10px 
+			margin-bottom: -22px 
+			
+	.games
+		img
+			margin-left: -15px 
+			
+	.household-appliances
+		img
+			margin: 0 auto
+			
+
+	.more-link
+		font-family: $f
+		color: $lilac
+		text-decoration: underline 
+		position: relative
+		top: -57px

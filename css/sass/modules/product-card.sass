@@ -6,7 +6,7 @@
 	margin: 0 auto 85px
 	color: #3d3d3d
 	position: relative
-	min-height: 368px 
+	min-height: 358px 
 	transition: all 0.3s ease
 	background-color: #FFF 
 	
@@ -51,7 +51,7 @@
 			bottom: 0
 			right: -1px
 			display: flex
-			opacity: 0.5
+			opacity: 0.3
 			transition: all 0.3s ease
 			
 			.slider-control
@@ -70,7 +70,7 @@
 
 	&-description
 		display: block
-		padding: 20px
+		padding: 15px 10px
 		line-height: normal 
 		
 		h3
@@ -82,11 +82,10 @@
 
 		.price-row
 			line-height: normal 
-			
-			&.no-discount
-				display: flex
-				align-items: center
-				justify-content: space-between
+			display: flex
+			align-items: center
+			justify-content: space-between
+			font-size: 13px 
 				
 			.price-block
 				.value
@@ -97,6 +96,34 @@
 					
 					.currency
 						font-size: 18px
+						
+				.new-price
+					width: 75px
+					height: 38px
+					display: inline-block
+					background-image: url(../images/golden-ticket.svg)
+					background-repeat: no-repeat 
+					background-position: 50% 50% 
+					background-size: 100%
+					text-align: center
+					padding: 7px 0
+					
+					.value
+						font-size: 18px 
+						
+						.currency
+							font-size: 16px 
+						
+			&.has-discount
+				margin-top: -5px 
+				margin-bottom: -6px
+				 
+				.price-block
+					> .value
+						font-size: 18px
+						text-decoration: line-through 
+						font-weight: 400
+
 						
 
 			.controls-block
@@ -110,7 +137,7 @@
 					background-color: transparent
 					border: 0 
 					color: $blue-55
-					font-size: 18px
+					font-size: 16px
 					cursor: pointer
 					transition: all 0.3s ease
 					
@@ -118,7 +145,7 @@
 						display: block
 					
 					& + button
-						margin-left: 10px 
+						margin-left: 8px 
 						
 					&:hover,
 					&.active

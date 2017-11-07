@@ -136,6 +136,7 @@ jQuery(document).ready(function($) {
     })
 
 
+    // custom slider on product card
     $('.slider-control').on('click mouseover', function(event) {
         event.preventDefault();
         event.stopPropagation();
@@ -149,6 +150,30 @@ jQuery(document).ready(function($) {
         slider.find('.slide').removeClass('active');
         slider.find('.slide-' + index).addClass('active');
     });
+
+
+    /*---------------------------
+                                  Tabs
+    ---------------------------*/
+    $('.products-tabs').tabs({
+        activate: function( event, ui ) {
+            console.log(ui)
+            ui.newPanel.find('.scrollbar').mCustomScrollbar("update");
+        }
+    });
+
+
+    /*---------------------------
+                                  Scrollbar
+    ---------------------------*/
+    $('.scrollbar').mCustomScrollbar({
+        axis:"x",
+        scrollButtons: {
+            enable: true,
+            scrollAmount: 40
+        }
+    });
+
 
 
 
