@@ -1,0 +1,242 @@
+.basket-content
+	padding: 40px 0 155px
+	border-bottom: 1px solid #D4D0D8
+
+
+.basket-row
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	padding: 35px 15px
+	background-color: #F5F6F7 
+	margin-bottom: 10px 
+	
+	+ hr
+		border: 0
+		border-top: 1px solid $lilac
+		margin: 20px 0
+	
+	.br-delete
+		width: 35px
+		
+		button
+			color: $red
+			opacity: 0.5
+			background-color: transparent
+			border: 0
+			cursor: pointer 
+			width: 20px
+			height: 20px
+			border-radius: 50%
+			padding: 0
+			text-align: center
+			display: flex
+			align-items: center
+			justify-content: center
+			transition: all 0.3s ease
+			font-size: 14px 
+			
+			.fa
+				display: block
+			
+			&:hover
+				opacity: 1
+				color: #fff
+				background-color: $red 
+				
+
+	.br-image
+		width: 70px
+		
+		img
+			display: block
+			width: 100%
+			
+
+	.br-total
+		width: 160px
+		text-align: right
+		
+		.price
+			font-size: 24px
+			color: $lilac 
+			justify-content: flex-end
+		
+	.br-count
+		width: 105px
+		
+	.br-price
+		padding-right: 90px
+		text-align: right
+		width: 160px 
+		
+	.br-name
+		flex: 1 1 auto
+		padding-left: 30px
+		
+		.term
+			margin-bottom: 8px 
+			span
+				color: #8892bb
+				
+		.product-title
+			margin-bottom: 0
+			font-size: 20px  
+			
+	.br-label
+		color: #8892bb
+		margin-bottom: 8px 
+		
+
+.price
+	height: 40px
+	font-size: 20px
+	font-weight: 700
+	display: inline-flex
+	align-items: center
+	justify-content: flex-end
+	position: relative
+	
+	&.has-discount	
+		&:after
+			content: ''
+			width: 100%
+			height: 2px
+			position: absolute
+			top: 50%
+			margin-top: -1px 
+			left: 0
+			background-color: $text
+	
+	.currency
+		font-family: $f 
+		font-size: 0.8em 
+		margin-left: 0.2em 
+		
+	.discount-price
+		position: absolute
+		height: auto
+		top: 100%
+		right: 0
+		color: $blue-55
+		transform: translateY(-8px)
+		
+		.discount
+			width: 50px
+			height: 25px
+			background-image: url(../images/golden-ticket.svg)
+			background-position: 50% 50%
+			background-repeat: no-repeat 
+			color: $lilac
+			font-weight: 700   
+			background-size: 100%
+			font-size: 14px 
+			text-align: center
+			line-height: 25px 
+			position: absolute
+			top: 0
+			left: 100%
+			transform: translate(5px, -50%) rotate(-20deg)
+		
+
+
+.carusel
+	display: flex
+	width: 100%
+	height: 40px
+	
+	button
+		width: 25%
+		background-color: #fff
+		border: 0
+		color: $lilac
+		transition: all 0.3s ease 
+		cursor: pointer
+		outline: none
+		
+		&:hover
+			background-color: $lilac
+			color: #fff 
+		
+	input
+		width: 50%
+		text-align: center
+		border: 0
+		
+
+
+.promocodes
+	display: flex
+	align-items: flex-end
+	
+	.promocode-item
+		width: 33.33%
+		padding-right: 125px
+		position: relative 
+		
+
+.promocode-item
+	.pi-label
+		margin-bottom: 5px
+		color: #8892bb
+		line-height: 20px  
+		
+	.pi-form
+		position: relative
+		
+		input
+			width: 100%
+			border: 1px solid #CACACA
+			font-weight: 700
+			padding: 0 5px 
+			height: 30px
+			color: $text
+			
+		.pi-status
+			position: absolute
+			top: 50%
+			left: 100%
+			padding-left: 10px 
+			white-space: nowrap
+			transform: translateY(-50%)
+			
+			span
+				font-weight: 700
+				color: $blue-55 
+			
+			.fa-check-circle
+				color: $green
+				
+			.fa-times-circle
+				color: $red
+				
+
+
+.basket-total
+	text-align: right
+	
+	.label
+		margin-bottom: 5px
+		color: #8892bb
+		
+	.price
+		font-size: 30px
+		
+		&.regular
+			color: #c9c9c9
+			
+			&:after
+				content: ''
+				width: 100%
+				height: 2px
+				position: absolute
+				top: 50%
+				margin-top: -1px 
+				left: 0
+				background-color: #C9C9C9 
+			
+		&.actual
+			color: $lilac
+			
+	.btn
+		margin-top: 40px 

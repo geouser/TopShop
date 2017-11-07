@@ -1,0 +1,143 @@
+.account-content
+	border-bottom: 1px solid #D4D0D8
+	padding: 55px 0 110px
+	
+
+.user-account
+	display: flex
+	align-items: flex-start
+	flex-wrap: wrap
+	width: 970px
+	
+	.user-picture
+		width: 135px
+		
+		.picture-block
+			width: 100%
+			padding-top: 100%
+			border-radius: 50% 
+			background-position: 50% 50%
+			background-repeat: no-repeat 
+			background-size: cover
+			position: relative 
+			z-index: 1 
+			
+			a
+				position: absolute
+				top: 0
+				right: 0
+				color: #046a95
+				z-index: 1 
+				
+				&:hover
+					text-decoration: none
+				
+				.fa
+					display: block
+					
+
+	.user-info
+		width: -webkit-calc(100% - 135px)
+		width: calc(100% - 135px)
+		padding-left: 60px 
+		
+		.points
+			margin-bottom: 30px 
+		
+
+
+		.address-row,
+		.actions-row
+			margin: 0 -15px
+			display: flex
+			margin-bottom: 40px 
+			
+			.column
+				width: 37.5%
+				padding: 0 15px
+				
+		.change-password
+			padding: 0 15px
+			
+			img
+				margin-right: 10px 
+				
+		.actions-row
+			margin-bottom: 0 
+			
+		hr
+			border: 0
+			background-color: none
+			border-top: 1px solid #DDD0E6
+			margin: 40px 0  
+				
+
+
+.address-block
+	h3
+		font-size: 16px
+		 
+	textarea
+		display: block
+		width: 100%
+		font-size: 18px
+		resize: none
+		margin-bottom: 5px 
+		
+	.submit-btn
+		height: 40px
+		margin-top: 10px 
+		
+	.edit-btn
+		border: 0
+		background-color: transparent
+		color: #046a95
+		cursor: pointer
+		
+		&:hover
+			text-decoration: underline
+		
+		.fa
+			margin-right: 5px 
+		
+	form.not-active
+		textarea
+			height: auto!important
+			border: 0
+			pointer-events: none
+			
+		.submit-btn
+			display: none
+			
+	form.active
+		textarea
+			height: 70px
+			border: 1px solid #eee
+			border-radius: 5px
+			padding: 5px
+			font-size: 16px 
+			
+		.edit-btn
+			display: none
+			
+
+.action-box
+	display: flex
+	padding: 15px
+	border: 1px solid 
+	border-bottom: 5px solid 
+	color: #373737
+	
+	&:hover
+		color: #373737
+	
+	span
+		padding-left: 15px
+		font-size: 18px
+		font-weight: 700   
+	
+	&.lilac
+		border-color: $lilac
+		
+	&.blue
+		border-color: $blue-25

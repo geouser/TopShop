@@ -13,8 +13,25 @@
 	&:hover
 		text-decoration: none
 		
+	&--full
+		width: 100%
+		
 	&--blue
 		background-color: $blue-00
+		
+		&:hover
+			color: #fff
+			background-color: $blue-25
+			
+	&--green
+		background-color: $green
+		
+		&:hover
+			color: #fff
+			background-color: $green
+			
+	&--blue-25
+		background-color: $blue-25
 		
 		&:hover
 			color: #fff
@@ -26,8 +43,44 @@
 		&:hover
 			color: #fff
 			background-color: $lilac-dark
+			
+	&--green-o
+		background-color: #fff
+		border: 1px solid $green
+		color: $green
+		
+		&:hover
+			background-color: $green
+			color: #fff 
 
 
+
+
+
+.tooltip
+	position: relative
+	display: inline-block
+	
+	&:after
+		content: attr(data-text)
+		position: absolute
+		bottom: 100%
+		width: 120px
+		height: auto
+		padding: 6px
+		background-color: $lilac
+		color: #fff 
+		border-radius: 4px
+		opacity: 0
+		visibility: hidden
+		transition: all 0.3s ease
+		
+	&:hover:after
+		opacity: 1
+		visibility: visible
+		
+
+		
 /* ------------------------------------ */
 /*  SLICK ARROWS  */
 .slick-arrow,

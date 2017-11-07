@@ -1,0 +1,117 @@
+.horizontal-menu
+	ul
+		display: flex
+		align-items: center
+		flex-wrap: nowrap
+		margin-bottom: 0 
+		margin: 0 -12px 0
+		
+		@media (max-width: 1750px)
+			font-size: 14px 
+			margin: 0 -10px 0
+
+		
+		> li
+			position: relative
+			list-style: none 
+			
+			@media (max-width: 1750px)
+				flex: 1 1 auto
+			
+			&:after
+				content: ''
+				width: 1px
+				height: 30px
+				position: absolute
+				right: 0
+				background-color: #301A42
+				top: 50%
+				transform: translateY(-50%) 
+			
+			> a
+				display: flex
+				align-items: center
+				color: #fff
+				padding: 9px 12px
+				justify-content: center
+				transition: all 0.3s ease
+				
+				@media (max-width: 1750px)
+					padding: 11px 10px
+				
+				.label
+					border-bottom: 1px dashed transparent
+					line-height: 16px 
+				
+				.icon,
+				.fa
+					color: $blue-55
+					
+				.icon
+					margin-right: 5px 
+					
+				.fa
+					margin-left: 5px 
+					width: 6px
+					
+				&:hover
+					text-decoration: none
+					.label
+						border-bottom: 1px dashed #fff
+			
+			.sub-menu
+				position: absolute
+				opacity: 0
+				visibility: hidden
+				width: 220px
+				background-color: #42205B 
+				top: 100%
+				left: 0
+				display: block
+				margin: 0
+				transition: all 0.2s ease
+				
+				li
+					width: 100%
+					border-bottom: 1px solid #301A42
+					
+					a
+						display: block
+						padding: 8px
+						text-align: left
+						transition: all 0.3s ease
+						
+						&:hover
+							background-color: #301A42 
+				
+					
+			&:last-child
+				&:after
+					display: none
+					
+
+			&:hover
+				a
+					background-color: #301A42
+					
+				.sub-menu
+					opacity: 1
+					visibility: visible
+				
+
+
+	.icon
+		font-size: 14px
+		
+		@media (max-width: 1750px)
+			font-size: 12px 
+		 
+		&-eye
+			font-size: 9px 
+			
+		&-book,
+		&-t-shirt
+			font-size: 13px 
+			
+			@media (max-width: 1750px)
+				font-size: 12px 

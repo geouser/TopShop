@@ -178,6 +178,49 @@ jQuery(document).ready(function($) {
 
 
     /*---------------------------
+                                  Address form
+    ---------------------------*/
+    $('.js-activate-form').on('click', function(event) {
+        event.preventDefault();
+        $(this).parent('form').removeClass('not-active').addClass('active');
+    });
+
+    $('.js-submit-form').on('click', function(event) {
+        event.preventDefault();
+        // here place ajax function to update address
+        $(this).parent('form').removeClass('active').addClass('not-active');
+    });
+
+
+
+
+    /*---------------------------
+                                  carusel
+    ---------------------------*/
+    $('.js-minus').on('click', function(event) {
+        event.preventDefault();
+        var i = $(this).siblings('input').val();
+        if ( i > 1 ) {
+            i--;
+        } 
+        $(this).siblings('input').val(i);
+        $(this).siblings('input').trigger('changed')
+    });
+
+    $('.js-plus').on('click', function(event) {
+        event.preventDefault();
+        var i = $(this).siblings('input').val();
+        i++;
+        $(this).siblings('input').val(i);
+        $(this).siblings('input').trigger('changed')
+    });
+
+
+
+
+
+
+    /*---------------------------
                                   Form submit
     ---------------------------*/
     $('.ajax-form').on('submit', function(event) {
