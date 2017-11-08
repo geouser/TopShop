@@ -258,6 +258,31 @@ jQuery(document).ready(function($) {
     });
 
 
+    /*---------------------------
+                                  Check email
+    ---------------------------*/
+    function isEmail(email) {
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regex.test(email);
+    }
+
+    $('.js-check-email').on('change', function(event) {
+        event.preventDefault();
+        var val = $(this).val();
+        var parent = $(this).parents('.form-group');
+        $(this).removeClass('not-valid');
+        parent.find('.error').remove();
+
+        if ( val ) {
+            if ( !isEmail(val) ) {
+                parent.append('<span class="error"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>Некоректый формат почты</span>');
+                $(this).addClass('not-valid');
+            }    
+        }
+        
+    });
+
+
 
     /*---------------------------
                                   Form submit

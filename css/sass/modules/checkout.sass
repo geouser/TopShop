@@ -1,0 +1,179 @@
+.checkout-content
+	padding: 45px 0 135px
+	border-bottom: 1px solid #D4D0D8
+	
+
+.total-card
+	padding: 25px 20px
+	background-color: #F5F6F7
+	font-size: 14px  
+	
+	table
+		width: 100%
+		
+		td:last-child
+			text-align: right
+			
+	hr
+		border: 0
+		border-top: 1px solid #D5C9E0
+		margin: 12px 0
+		
+	p:last-child
+		margin-bottom: 0 
+		
+
+
+.checkout-form
+
+	.form-section
+		&-title
+			font-size: 24px
+			display: inline-block 
+			border-bottom: 2px solid #CDCDCD
+			margin-bottom: 30px 
+			line-height: 24px 
+			
+	hr
+		border: 0
+		border-top: 1px solid #DDD0E6
+		margin: 45px 0
+		
+	.js-get-location
+		font-size: 18px
+		color: #046a95
+		text-decoration: underline
+		
+		.fa
+			margin-right: 5px 
+			
+
+	.alert-area
+		padding-top: 45px 
+		p
+			line-height: 24px
+			
+			&:last-child
+				margin-bottom: 0!important 
+			
+			&.main-alert
+				margin-bottom: 20px 
+				font-size: 18px 
+				
+			&.secondary-alert
+				margin-bottom: 10px 
+				
+	.btn
+		margin-top: 70px 
+			
+
+	.form-group
+		width: 300px
+		max-width: 100%
+		position: relative
+		margin-bottom: 15px 
+		
+		.label
+			font-weight: 700
+			display: block 
+			margin-bottom: 4px 
+			
+		.error
+			position: absolute
+			bottom: 25px
+			left: 100%
+			padding-left: 20px
+			color: $red
+			transform: translateY(50%)
+			width: 300px
+			display: flex
+			align-items: center
+			font-size: 18px
+			
+			.fa
+				margin-right: 10px 
+			
+	.form-control
+		width: 100%
+		height: 50px
+		border: 1px solid #CACACA
+		padding: 0 15px
+		font-size: 18px 
+		
+		&.not-valid
+			border-color: $red
+			color: $red
+			
+		+placeholder
+			opacity: 0.5
+			
+	.input-group
+		display: flex
+		align-items: center
+		
+		&-addon
+			padding: 0 5px
+			font-size: 18px 
+			
+
+
+	.payment-row
+		width: 300px
+		max-width: 100%
+		display: flex
+		 
+	.payment-radio
+		width: 50%
+		display: block
+		position: relative
+		padding: 18px
+		margin-bottom: 0
+		cursor: pointer 
+		
+		input
+			position: absolute
+			opacity: 0
+			
+		.icon
+			display: flex
+			align-items: center
+			justify-content: center
+			height: 70px
+			border-radius: 4px
+			font-size: 45px
+			color: #fff 
+			
+			&.icon-credit-card
+				background-color: $lilac
+				
+			&.icon-cash
+				background-color: $blue-55 
+				
+		.label
+			line-height: normal 
+			margin-bottom: 0
+			display: block
+			margin-top: 5px
+			font-weight: normal   
+			
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
+				background-color: #CCEEFF 
+				border: 1px solid #CBB8DA
+				z-index: -1
+				border-radius: 4px 
+				opacity: 0
+				visibility: hidden
+				transition: all 0.3s ease
+				
+		input:checked + .label
+			color: $lilac
+			
+			&:after
+				opacity: 1
+				visibility: visible
