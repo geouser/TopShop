@@ -1,0 +1,165 @@
+.compare-content
+	padding: 45px 0 70px
+	border-bottom: 1px solid #D4D0D8
+	
+
+.compare-scroll
+	overflow: auto
+	width: 100%
+	padding-bottom: 20px
+	position: relative
+	
+.compare-table
+	font-size: 14px 
+	padding-top: 50px 
+	
+	.c-row
+		display: flex
+		align-items:
+		flex-wrap: nowrap
+		
+		&.hidden
+			display: none
+	
+	.c-cell
+		+col-width(33.33%)
+		min-width: 25% 
+		padding: 12px 15px
+		
+		.price
+			line-height: 24px
+			height: auto  
+		
+		&.c-desc
+			padding-left: 0 
+			
+			span
+				color: #8892bb
+			
+	.c-head 
+		margin-bottom: 10px
+		font-size: 16px 
+		 
+		.c-desc
+			padding-top: 50px 
+		
+
+	.c-body
+		color: $lilac
+		
+		.c-row
+			border-bottom: 1px solid #D9D9D9
+			transition: all 0.3s ease
+			
+			&:last-child
+				border-bottom: 0
+							
+			&:hover
+				background-color: #F9F9F9 
+		
+
+
+	.c-product
+		background-color: #F5F6F7 
+		padding: 40px 15px
+		display: flex
+		position: relative
+		
+		.delete,
+		.cart
+			position: absolute
+			border: 0
+			background-color: transparent
+			padding: 0
+			cursor: pointer
+			transition: all 0.3s ease 
+			opacity: 0.5
+			
+			.fa,
+			.icon
+				display: block
+			
+			&:hover
+				opacity: 1
+			
+		.delete
+			color: $red
+			top: 15px
+			right: 15px
+			transform: translate(50%, -50%)
+			font-size: 14px 
+			
+		.cart
+			color: $lilac
+			bottom: 15px
+			right: 15px
+			transform: translate(50%, 50%)
+			font-size: 20px 
+		
+		&__image
+			width: 50px
+			
+			img
+				display: block
+				width: 100% 
+				
+		&__title
+			width: -webkit-calc(100% - 50px)
+			width: calc(100% - 50px)
+			padding-left: 10px
+			
+			h3
+			 	font-size: 16px 
+			 	line-height: normal 
+			 	
+			.term
+				span
+					color: #8892bb
+		
+
+.compare-filter
+	display: flex
+	flex-wrap: wrap
+	
+	.title
+		color: #8892bb
+		margin-bottom: 10px 
+		width: 100%
+		
+.category-filter
+	margin-bottom: -5px
+
+	.cf-link
+		padding: 2px 15px
+		border: 1px solid #F3F3F3
+		background-color: #F3F3F3 
+		margin-right: 5px
+		color: $lilac
+		text-decoration: none
+		transition: all 0.3s ease
+		margin-bottom: 5px
+		 
+		&.active
+			border: 1px dashed $lilac
+			background-color: #fff 
+			
+		&:hover
+			background-color: $lilac
+			border-color: $lilac
+			color: #fff 
+				
+		
+
+.difference-filter
+	margin-bottom: -5px 
+	
+	.df-link
+		border-bottom: 1px dashed $lilac
+		color: $lilac
+		margin-right: 20px
+		margin-bottom: 5px  
+		
+		&:hover,
+		&.active
+			text-decoration: none
+			border-bottom: 1px solid $lilac

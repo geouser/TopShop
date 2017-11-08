@@ -283,6 +283,28 @@ jQuery(document).ready(function($) {
     });
 
 
+    /*---------------------------
+                                  Compare-table
+    ---------------------------*/
+    $('.df-link').on('click', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        $('.df-link').not($(this)).removeClass('active');
+        $('.compare-table').find('.c-row').removeClass('hidden');
+
+        if ( !$(this).hasClass('active') ) {
+            if ( $(this).hasClass('js-similar') ) {
+                $('.compare-table').find('.c-row.similar').addClass('hidden');
+            } else if ( $(this).hasClass('js-different') ) {
+                $('.compare-table').find('.c-row.different').addClass('hidden');
+            }
+        }
+
+        $(this).toggleClass('active');
+        
+    });
+
+
 
     /*---------------------------
                                   Form submit
