@@ -1,0 +1,109 @@
+.delivery-steps
+	h2
+		color: $lilac
+		margin-bottom: 35px 
+		
+	img
+		max-width: 100%
+		display: block 
+
+	.step
+		width: 580px
+		max-width: 100% 
+		padding: 26px 60px
+		border: 1px dashed #E6DCED
+		margin-bottom: 20px
+		counter-increment: step
+		
+		&:last-child 
+			margin-bottom: 0
+			
+		h3
+			font-size: 24px
+			font-weight: normal  
+			margin-bottom: 25px 
+			line-height: normal 
+			position: relative
+			
+			&:before
+				content: counter(step)"."
+				left: -30px
+				position: absolute
+				color: $blue-55
+				font-weight: 700 
+			
+		.icon-headphones
+			font-size: 38px
+			color: $lilac 
+			
+.delivery-text
+	margin: 70px 0 50px
+	border-left: 4px solid $blue-55
+	padding: 5px 35px 5px 35px
+	
+	p
+		margin-bottom: 1.25rem
+		 
+		&:last-child
+			margin-bottom: 0 
+		
+
+	.delivery-phones
+		font-size: 24px
+		line-height: normal 
+		margin-bottom: 1.25rem
+		
+		.icon
+			color: $lilac
+			margin-right: 10px 
+			font-size: 22px
+			
+		a
+			font-weight: 700
+
+			&:hover
+				text-decoration: none
+			
+			.value
+				border-bottom: 2px solid #CDCDCD
+		
+		p
+			margin-bottom: 0 
+				
+			&:not(:last-child)
+				margin-bottom: 5px 
+				
+
+.az-delivery
+	padding: 80px 0 120px
+	background-color: #F7F4FA 
+	margin-bottom: 60px 
+	
+	h2
+		color: $lilac
+		font-size: 24px 
+		
+	hr
+		border: 0
+		border-top: 1px solid $blue-55 
+		margin-bottom: 90px 
+		
+	&-item
+		figure
+			margin: 0 0 35px 0
+			height: 105px
+			display: flex
+			align-items: center
+			 
+			img
+				display: block
+				max-width: 100%
+				max-height: 100%  
+			
+		p
+			margin-bottom: 8px
+			
+		hr
+			width: 190px
+			max-width: 100%
+			margin: 0 auto 10px 0
