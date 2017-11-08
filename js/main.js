@@ -243,6 +243,21 @@ jQuery(document).ready(function($) {
 
 
 
+    /*---------------------------
+                                  List - Grid view
+    ---------------------------*/
+    $('.view-option').on('click', function(event) {
+        event.preventDefault();
+        $('.view-option').removeClass('active');
+        $('.main').removeClass('list-view');
+        
+        $(this).addClass('active');
+        if ( $(this).hasClass('list-view') ) {
+            $('.main').addClass('list-view');
+        }
+    });
+
+
 
     /*---------------------------
                                   Form submit

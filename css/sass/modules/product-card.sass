@@ -7,7 +7,7 @@
 	color: #3d3d3d
 	position: relative
 	min-height: 358px 
-	transition: all 0.3s ease
+	transition: filter 0.3s ease
 	background-color: #FFF 
 	
 
@@ -194,3 +194,81 @@
 			opacity: 1
 			visibility: visible
 			
+
+
+
+.list-view
+	[class*="col-"]
+		+col-width(100%)
+
+	.product-card
+		width: 100%
+		max-width: 100% 
+		min-height: 0 
+		display: flex
+		align-items: center
+		flex-wrap: nowrap
+		padding: 20px 15px
+		margin-bottom: 20px 
+		
+
+		.slider
+			width: 100px
+			height: 100px
+			
+		&-description
+			width: -webkit-calc(100% - 300px)
+			width: calc(100% - 300px)
+			display: flex
+			align-items: center
+			justify-content: space-between
+			
+			h3
+				width: 50%
+				margin-bottom: 0
+				font-weight: 700
+				padding-right: 15px 
+				
+				@media (min-width: 1801px)
+					font-size: 20px 
+					
+				@media (max-width: 1800px)
+					width: 40%
+				
+			.price-row 
+				width: 25%
+				
+				@media (max-width: 1800px)
+					width: 30%
+								
+				.controls-block
+					display: none
+					
+				.new-price
+					display: block
+					
+				.price-block
+					text-align: center
+					
+					.value,
+					.currency
+						color: $lilac
+					
+			.points
+				position: static
+				white-space: nowrap
+				transform: none
+			
+		.btn
+			width: 200px
+			position: static
+			opacity: 1
+			visibility: visible
+			padding: 0 15px
+			
+			@media (max-width: 1800px)
+				height: 45px
+				font-size: 15px 
+			
+			.icon
+				margin-right: 5px 

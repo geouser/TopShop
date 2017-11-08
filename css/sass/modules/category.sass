@@ -22,10 +22,14 @@
 		@media (min-width: 1801px)
 			.col-lg-4
 				+col-width(25%)
+
+			&.list-view
+				.col-lg-4
+					+col-width(100%)
 		
 		@media (max-width: 1800px)
 			width: 75%
-			
+
 
 
 .filters
@@ -74,3 +78,69 @@
 		
 	.ui-slider
 		margin-top: 40px 
+		
+
+
+.view-options
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	margin-bottom: 85px 
+	
+	.sort-option,
+	.view-option
+		margin-left: 30px
+		color: #313131
+		transition: all 0.2s ease
+		
+		.fa
+			color: #cacaca
+			transition: all 0.2s ease
+			
+		&.active,
+		&:hover
+			color: $blue-25
+			text-decoration: none
+			
+			.fa
+				color: $blue-25
+				
+
+	.sort-option
+		.fa
+			margin-right: 5px 
+			
+		&.desc
+			.fa
+				&:before
+					content: '\f0dd'
+					
+		&.asc
+			.fa
+				&:before
+					content: '\f0de'
+					
+
+
+.pagination
+	margin: 0 auto
+	font-size: 20px
+	color: $text 
+	font-weight: 700 
+	text-align: center
+	padding-top: 25px 
+	
+	.pagination-link
+		color: $text
+		margin: 0 10px
+		transition: all 0.2s ease
+		
+		&:hover,
+		&.active
+			text-decoration: none
+			color: $blue-55
+	
+	span.pagination-link
+		color: $text
+		&:hover
+			color: $text
