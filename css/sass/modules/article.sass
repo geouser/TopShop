@@ -45,6 +45,10 @@
 	
 	&:last-child
 		margin-bottom: 0
+		
+	&.grey
+		background-color: #F7F4FA 
+		background-image: none 
 		 	
 	p
 		color: rgba(255, 255, 255, .25)
@@ -64,6 +68,19 @@
 				
 			&:hover
 				color: rgba(85, 198, 254, 0.25)
+				
+	&.grey
+		p
+			color: rgba(55, 55, 55, .25)
+			
+			span
+				color: $text
+				
+			a
+				span
+					color: $blue-55
+					
+
 		
 	&.has-image
 		p
