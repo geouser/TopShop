@@ -360,6 +360,15 @@ jQuery(document).ready(function($) {
     });
 
 
+    /*---------------------------
+                                  Toggle mail instrucntions
+    ---------------------------*/
+    $('.js-toggle-instructions').on('click', function(event) {
+        event.preventDefault();
+        $(this).siblings('.instructions').slideToggle();
+    });
+
+
 
     /*---------------------------
                                   Form submit

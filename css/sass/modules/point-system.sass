@@ -1,0 +1,55 @@
+.image-text
+	position: relative
+	font-size: 19px 
+	margin: 60px 0
+	
+	img
+		display: block
+		width: 100%
+		
+	p
+		color: #fff
+		position: absolute
+		bottom: 20px
+		left: 20px
+		right: 20px
+		margin-bottom: 0 
+		
+
+.decorated-list
+	padding: 40px 60px!important
+	background-image: url(../images/white-pattern.png) 
+	font-size: 18px
+	
+	li
+		list-style: none
+		line-height: 24px
+		position: relative
+		
+		&:not(:last-child)
+			margin-bottom: 40px 
+		
+		&:before
+			content: ''
+			width: 6px
+			height: 6px
+			border-radius: 50%
+			background-color: $blue-55
+			position: absolute
+			left: -20px
+			top: 12px
+			margin-top: -3px  
+			
+
+
+.go-to-profile
+	font-size: 24px
+	font-weight: 700
+	padding-top: 50px
+	 
+	a
+		color: $blue-25
+		text-decoration: underline
+		
+	p
+		margin-bottom: 0 
