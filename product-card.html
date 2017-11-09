@@ -1,0 +1,779 @@
+<!doctype html>
+<html class="no-js" lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="shortcut icon" href="favicon.ico">
+		<!-- Place favicon.ico in the root directory -->
+
+		<link rel="stylesheet" href="css/general.css">
+	</head>
+	<body>
+
+
+		<header class="header">
+			
+			<div class="header-top">
+				<div class="header-container">
+					
+					<nav class="site-menu">
+						<ul>
+							<li><a href="index.html" class="active">Главная</a></li>
+							<li><a href="news.html">Новости</a></li>
+							<li><a href="about.html">О магазине</a></li>
+							<li><a href="delivery.html">Доставка и Оплата</a></li>
+							<li><a href="point-system.html">Система баллов</a></li>
+							<li><a href="faq.html">Часто задаваемые вопросы</a></li>
+							<li><a href="contacts.html">Контакты</a></li>
+						</ul>
+					</nav> <!-- end site-menu -->
+
+					<div class="header-top-controls">
+						<div class="phones">
+							<button class="show-phones js-show-phones">Звоните нам <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+
+							<div class="phones-container">
+								<a href="tel:+994 12 555 54 64"><span class="icon icon-phone"></span>+994 12 555 54 64</a>
+								<a href="tel:+994 12 555 64 64"><span class="icon icon-phone"></span>+994 12 555 64 64</a>
+								<a href="tel:+994 55 260 36 49"><span class="icon icon-phone"></span>+994 55 260 36 49</a>	
+							</div>
+						</div>
+
+						<div class="language-switcher">
+							<a href="#">RU</a>
+							<a href="#" class="current">AZ</a>
+						</div>
+					</div>						
+
+				</div>
+			</div> <!-- end header-top -->
+
+			<div class="header-middle">
+				<div class="header-container">
+					
+					<div class="logo">
+						<a href="index.html"><img src="images/logo.png" alt="Top Shops"></a>
+					</div> <!-- end logo -->
+
+					<div class="search">
+						<form action="">
+							<input type="text" name="search" placeholder="Поиск">
+							<button><span class="icon icon-search"></span></button>
+						</form>
+					</div> <!-- end search -->
+
+					<div class="user-controls">
+
+						<div class="user-lists">
+							<a href="compare.html" class="list-item compare">
+								<span class="icon icon-libra"></span>
+								<span class="label">Сравнение</span>
+							</a>
+							<a href="favourites.html" class="list-item compare">
+								<span class="icon icon-heart-o"></span>
+								<span class="label">Избранное</span>
+							</a>
+						</div>
+
+						<a href="basket.html" class="basket-link">
+							<span class="counter">
+								<span class="number">4</span>
+								<span class="label">товара в корзине</span>
+							</span>
+							<!-- if there is no items in basket, remove span.counter -->
+							<span class="icon icon-basket"></span>
+						</a>
+
+						<a href="#" class="profile-button">
+							<span class="user-name">Ilya</span>
+							<span class="user-icon">
+								<span class="icon icon-user"></span>
+							</span>
+							<i class="fa fa-angle-down" aria-hidden="true"></i>
+						</a>
+
+					</div>
+
+				</div>
+			</div> <!-- end header-middle -->
+
+
+			<div class="header-bottom">
+				<div class="header-container">
+					<nav class="horizontal-menu">
+						<ul>
+							<li>
+								<a href="#">
+									<span class="icon icon-lamp"></span>
+									<span class="label">Электротехника</span>
+									<!-- if menu item has submenu, than add arrow icon -->
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+								</a>
+
+								<ul class="sub-menu">
+									<li><a href="#"><span class="label">Электротехника</span></a></li>
+									<li><a href="#"><span class="label">Электротехника</span></a></li>
+									<li><a href="#"><span class="label">Электротехника</span></a></li>
+									<li><a href="#"><span class="label">Электротехника</span></a></li>
+									<li><a href="#"><span class="label">Электротехника</span></a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">
+									<span class="icon icon-eye"></span>
+									<span class="label">Красота и здоровье</span>
+									<!-- if menu item has submenu, than add arrow icon -->
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+								</a>
+
+								<ul class="sub-menu">
+									<li><a href="#"><span class="label">Электротехника</span></a></li>
+									<li><a href="#"><span class="label">Электротехника</span></a></li>
+									<li><a href="#"><span class="label">Электротехника</span></a></li>
+									<li><a href="#"><span class="label">Электротехника</span></a></li>
+									<li><a href="#"><span class="label">Электротехника</span></a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">
+									<span class="icon icon-moon"></span>
+									<span class="label">Аптека</span>
+									<!-- if menu item has submenu, than add arrow icon -->
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="icon icon-paw"></span>
+									<span class="label">В мире животных</span>
+									<!-- if menu item has submenu, than add arrow icon -->
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="icon icon-home"></span>
+									<span class="label">Все для дома</span>
+									<!-- if menu item has submenu, than add arrow icon -->
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="icon icon-cubes"></span>
+									<span class="label">Детский мир</span>
+									<!-- if menu item has submenu, than add arrow icon -->
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="icon icon-book"></span>
+									<span class="label">Книги</span>
+									<!-- if menu item has submenu, than add arrow icon -->
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="icon icon-chair"></span>
+									<span class="label">Мебель</span>
+									<!-- if menu item has submenu, than add arrow icon -->
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="icon icon-t-shirt"></span>
+									<span class="label">Одежда/Обувь</span>
+									<!-- if menu item has submenu, than add arrow icon -->
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="icon icon-star"></span>
+									<span class="label">Показать все</span>
+									<!-- if menu item has submenu, than add arrow icon -->
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+								</a>
+							</li>
+						</ul>
+					</nav>	
+				</div>
+				
+			</div>
+
+		</header> <!-- end header -->
+
+
+		
+		<!--<button class="hamburger hamburger--spin js-toggle-menu menu-button" type="button">
+			<span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+			</span>
+		</button>  -->
+
+
+		<section class="page-heading">
+			<div class="container">
+
+				<div class="breadcrumbs">
+					<ul>
+						<li><a href="#">Главная</a></li>
+						<li><a href="#">Электротехника</a></li>
+						<li><a href="#">Фотоаппараты и Видеокамеры</a></li>
+						<li><span>Зеркальный фотоаппарат Canon EOS 700D Kit 18-55 IS STM</span></li>
+					</ul>
+				</div>
+
+				<h1>зеркальный фотоаппарат Canon EOS 700D Kit 18-55 IS STM</h1>
+
+			</div>
+		</section> <!-- end page-heading -->
+
+
+
+		<section class="page-content">
+			<div class="container">
+				
+				<form action="">
+
+					<div class="row">
+						<div class="col-12 col-lg-6 col-xl-4">
+
+							<div class="product-photos">
+								<div class="product-slider">
+									<div class="slide"><img data-lazy="images/product-1-slide-1.jpg" alt=""></div>
+									<div class="slide"><img data-lazy="images/product-1-slide-2.jpg" alt=""></div>
+									<div class="slide"><img data-lazy="images/product-1-slide-3.jpg" alt=""></div>
+									<div class="slide"><img data-lazy="images/product-2-slide-1.jpg" alt=""></div>
+									<div class="slide"><img data-lazy="images/product-2-slide-2.jpg" alt=""></div>
+								</div>
+
+								<div class="product-thumbnails">
+									<button class="thumbnail active" data-index="0"><img src="images/product-1-slide-1.jpg" alt=""></button>
+									<button class="thumbnail" data-index="1"><img src="images/product-1-slide-2.jpg" alt=""></button>
+									<button class="thumbnail" data-index="2"><img src="images/product-1-slide-3.jpg" alt=""></button>
+									<button class="thumbnail" data-index="3"><img src="images/product-2-slide-1.jpg" alt=""></button>
+									<button class="thumbnail" data-index="4"><img src="images/product-2-slide-2.jpg" alt=""></button>
+								</div>
+							</div>
+
+						</div>
+						<div class="col-12 col-lg-6 col-xl-4">
+
+							<div class="product-info">
+
+								<div class="pi-block">
+									<p class="term"><span>Артикул:</span> dc-024</p>
+								</div>
+
+								<div class="pi-block">
+									<label class="label">Доступные цвета:</label>
+									
+									<div class="color-controls">
+										<label class="color-checkbox" data-tooltip="Черный">
+											<input type="radio" name="color" value="">
+											<span class="indicator">
+												<span class="color" style="background-color: #000000"></span>
+											</span>
+											<i class="fa fa-angle-up" aria-hidden="true"></i>
+										</label>
+										<label class="color-checkbox" data-tooltip="Серый">
+											<input type="radio" name="color" value="">
+											<span class="indicator">
+												<span class="color" style="background-color: #CCCCCC"></span>
+											</span>
+											<i class="fa fa-angle-up" aria-hidden="true"></i>
+										</label>
+										<label class="color-checkbox" data-tooltip="Белый">
+											<input type="radio" name="color" value="">
+											<span class="indicator">
+												<span class="color" style="background-color: #ffffff"></span>
+											</span>
+											<i class="fa fa-angle-up" aria-hidden="true"></i>
+										</label>
+										<label class="color-checkbox" data-tooltip="Красный">
+											<input type="radio" name="color" value="">
+											<span class="indicator">
+												<span class="color" style="background-color: #C42745"></span>
+											</span>
+											<i class="fa fa-angle-up" aria-hidden="true"></i>
+										</label>
+										<label class="color-checkbox" data-tooltip="Синий">
+											<input type="radio" name="color" value="">
+											<span class="indicator">
+												<span class="color" style="background-color: #55C6FE"></span>
+											</span>
+											<i class="fa fa-angle-up" aria-hidden="true"></i>
+										</label>
+										<label class="color-checkbox" data-tooltip="Черно-красный">
+											<input type="radio" name="color" value="">
+											<span class="indicator">
+												<span class="color" style="background-color: #000000"></span>
+												<span class="color" style="background-color: #C42745"></span>
+											</span>
+											<i class="fa fa-angle-up" aria-hidden="true"></i>
+										</label>
+									</div>
+								</div>
+
+								<div class="pi-block">
+									<label for="" class="label">Выбор размера:</label>
+
+									<div class="size-controls">
+										<label class="size-checkbox">
+											<input type="radio" name="size" value="s">
+											<span class="indicator">S</span>
+										</label>
+										<label class="size-checkbox">
+											<input type="radio" name="size" value="m">
+											<span class="indicator">M</span>
+										</label>
+										<label class="size-checkbox">
+											<input type="radio" name="size" value="l">
+											<span class="indicator">L</span>
+										</label>
+										<label class="size-checkbox">
+											<input type="radio" name="size" value="xl">
+											<span class="indicator">XL</span>
+										</label>
+									</div>
+								</div>
+
+								<div class="pi-block">
+									<div class="product-features">
+										<div class="feature">
+											<div class="f-icon">
+												<span class="discount">-20%</span>
+											</div>
+											<div class="f-label">На скидке (осталось дней:2)</div>
+										</div>
+										<div class="feature">
+											<div class="f-icon">
+												<span class="icon icon-box blue"></span>
+											</div>
+											<div class="f-label">Бесплатная доставка</div>
+										</div>
+									</div>
+								</div>
+								
+							</div> <!-- end product-info -->
+
+						</div>
+
+
+						<div class="col-12 col-lg-12 col-xl-4">
+							<div class="product-actions">
+
+								<div class="pa-price">
+									<label for="" class="label">Цена:</label>
+									<div class="row align-items-center">
+										<div class="col-6">
+											<span class="price">
+												<span class="value">1135</span>
+												<span class="currency">₼</span>
+											</span>
+										</div>
+										<div class="col-6">
+											<span class="points">в баллах: <br><span class="value">11350</span></span>
+										</div>
+									</div>
+								</div>
+
+								<div class="pa-cart">
+									<a href="#" class="btn btn--lilac btn--full"><span class="icon icon-basket"></span>Добавить в корзину</a>
+								</div>
+
+								<div class="pa-lists">
+									<a href="#">
+										<span class="icon icon-libra"></span>
+										<span>Отметить для сравнения</span>
+									</a>
+									<a href="#">
+										<span class="icon icon-heart-o"></span>
+										<span>Добавить в избранное</span>
+									</a>
+								</div>
+
+
+								<div class="pa-share">
+									<label for="" class="label">Поделиться:</label>
+
+									<a href="" class="share-link fb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+									<a href="" class="share-link vk"><i class="fa fa-vk" aria-hidden="true"></i></a>
+									<a href="" class="share-link whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+									<a href="" class="share-link mail"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+									<a href="" class="share-link messenger"><span class="icon icon-facebook-messenger"></span></a>
+									<a href="" class="share-link skype"><i class="fa fa-skype" aria-hidden="true"></i></a>
+								</div>
+
+							</div> <!-- end product-actions -->
+						</div>
+
+
+					</div> <!-- end row -->
+
+				</form>
+				
+				
+				<div class="product-content">
+					<article class="article">
+						<h2>зеркальный фотоаппарат Canon EOS 700D Kit 18-55 IS STM</h2>
+
+						<p>Сделайте шаг в мир цифровой зеркальной фотографии и раскройте свой творческий потенциал. 18-мегапиксельный датчик позволяет создавать превосходные фотографии и видео, а удобный сенсорный ЖК-экран с переменным углом наклона Clear View II превращает съемку в удовольствие.</p>
+					</article>	
+
+
+					<table class="product-table">
+						<tr>
+							<td><p><span>Тип матрицы</span></p></td>
+							<td>CMOS</td>
+						</tr>
+						<tr>
+							<td><p><span>Кроп-фактор </span></p></td>
+							<td>1,6</td>
+						</tr>
+						<tr>
+							<td><p><span>Физический размер матрицы</span></p></td>
+							<td>22,3 х 14,9 мм</td>
+						</tr>
+						<tr>
+							<td><p><span>Разрешение матрицы, Мпикс</span></p></td>
+							<td>18</td>
+						</tr>
+						<tr>
+							<td><p><span>Чувствительность по ISO</span></p></td>
+							<td>Авто (100-6400), 100-12800 с шагом 1 ступень</td>
+						</tr>
+						<tr>
+							<td><p><span>Доступно расширение ISO до H: 25600</span></p></td>
+							<td>25600</td>
+						</tr>
+						<tr>
+							<td><p><span>Во время съемки видео</span></p></td>
+							<td>Авто (100-6400), 100-6400 (При шаге в целую ступень).</td>
+						</tr>
+						<tr>
+							<td><p><span>Чувствительность ISO может быть расширена до H</span></p></td>
+							<td>Чувствительность ISO может быть расширена до H</td>
+						</tr>
+						<tr>
+							<td><p><span>Экспокоррекция</span></p></td>
+							<td>+/-5 EV с шагом 1/3 или 1/2 (можно сочетать с автоматическим брекетингом (AEB)).</td>
+						</tr>
+						<tr>
+							<td><p><span>Выдержка </span></p></td>
+							<td>30-1/4000 с (с шагом 1/2 или 1/3), ручная длительная выдержка (Полный диапазон выдержек. </td>
+						</tr>
+						<tr>
+							<td><p><span>Видоискатель </span></p></td>
+							<td>Полупрозрачное зеркало быстродействующего типа (соотношение пропускание/отражение 40:60, изображение не обрезается краями зеркала с объективами 600 мм f/4 и менее)</td>
+						</tr>
+						<tr>
+							<td><p><span>Система фокусировки </span></p></td>
+							<td>Тип: TTL-CT-SIR с матрицей CMOS</td>
+						</tr>
+					</table>
+				</div>
+				
+
+			</div>
+		</section> <!-- end page-content -->
+
+
+
+		<section class="related-products">
+			<div class="title">
+				<div class="container">
+					<h2>Похожие товары</h2>
+				</div>
+			</div>
+			
+			<div class="container">
+				
+				<div class="row">
+
+					<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+						<a href="#" class="product-card">
+							<span class="slider">
+								<span class="slide slide-1 active">
+									<img src="images/product-1-slide-1.jpg" alt="">
+								</span>
+								<span class="slide slide-2">
+									<img src="images/product-1-slide-2.jpg" alt="">
+								</span>
+								<span class="slide slide-3">
+									<img src="images/product-1-slide-3.jpg" alt="">
+								</span>
+
+								<span class="slider-switcher">
+									<button class="slider-control active" data-index="1"></button>
+									<button class="slider-control" data-index="2"></button>
+									<button class="slider-control" data-index="3"></button>
+								</span>
+							</span> <!-- end slider -->
+
+							<span class="product-card-description">
+								<h3>Пылесос SAMSUNG VCC4520S3S/XEV</h3>
+
+								<span class="points">+13 баллов</span>
+
+								<span class="price-row no-discount">
+									<span class="price-block">
+										<span class="label">Цена:</span>
+										<span class="value">159<span class="currency">₼</span></span>
+									</span>
+									<span class="controls-block">
+										<button class="js-add-to-compare active"><span class="icon icon-libra"></span></button>
+										<button class="js-add-to-favourites"><span class="icon icon-heart-o"></span></button>
+									</span>
+								</span>
+							</span>
+
+							<button class="js-add-to-cart btn btn--lilac"><span class="icon icon-basket"></span>Добавить в корзину</button>
+						</a> <!-- end product-card -->
+					</div>
+
+					<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+						<a href="#" class="product-card">
+							<span class="slider">
+								<span class="slide slide-1 active">
+									<img src="images/product-2-slide-1.jpg" alt="">
+								</span>
+								<span class="slide slide-2">
+									<img src="images/product-2-slide-2.jpg" alt="">
+								</span>
+
+								<span class="slider-switcher">
+									<button class="slider-control active" data-index="1"></button>
+									<button class="slider-control" data-index="2"></button>
+								</span>
+							</span> <!-- end slider -->
+
+							<span class="product-card-description">
+								<h3>Мультиварка PHILIPS Viva Collection HD3136/03</h3>
+
+								<span class="points">+13 баллов</span>
+
+								<span class="price-row has-discount">
+									<span class="price-block">
+										<span class="label">Цена:</span>
+										<span class="value">15867<span class="currency">₼</span></span>
+										<span class="new-price">
+											<span class="value">14008<span class="currency">₼</span></span>
+										</span>
+									</span>
+									<span class="controls-block">
+										<button class="js-add-to-compare"><span class="icon icon-libra"></span></button>
+										<button class="js-add-to-favourites active"><span class="icon icon-heart-o"></span></button>
+									</span>
+								</span>
+							</span>
+
+							<button class="js-add-to-cart btn btn--lilac"><span class="icon icon-basket"></span>Добавить в корзину</button>
+						</a> <!-- end product-card -->
+					</div>
+
+					<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+						<a href="#" class="product-card">
+							<span class="slider">
+								<span class="slide slide-1 active">
+									<img src="images/product-1-slide-1.jpg" alt="">
+								</span>
+								<span class="slide slide-2">
+									<img src="images/product-1-slide-2.jpg" alt="">
+								</span>
+								<span class="slide slide-3">
+									<img src="images/product-1-slide-3.jpg" alt="">
+								</span>
+
+								<span class="slider-switcher">
+									<button class="slider-control active" data-index="1"></button>
+									<button class="slider-control" data-index="2"></button>
+									<button class="slider-control" data-index="3"></button>
+								</span>
+							</span> <!-- end slider -->
+
+							<span class="product-card-description">
+								<h3>Пылесос SAMSUNG VCC4520S3S/XEV</h3>
+
+								<span class="points">+13 баллов</span>
+
+								<span class="price-row no-discount">
+									<span class="price-block">
+										<span class="label">Цена:</span>
+										<span class="value">159<span class="currency">₼</span></span>
+									</span>
+									<span class="controls-block">
+										<button class="js-add-to-compare active"><span class="icon icon-libra"></span></button>
+										<button class="js-add-to-favourites"><span class="icon icon-heart-o"></span></button>
+									</span>
+								</span>
+							</span>
+
+							<button class="js-add-to-cart btn btn--lilac"><span class="icon icon-basket"></span>Добавить в корзину</button>
+						</a> <!-- end product-card -->
+					</div>
+
+					<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+						<a href="#" class="product-card">
+							<span class="slider">
+								<span class="slide slide-1 active">
+									<img src="images/product-2-slide-1.jpg" alt="">
+								</span>
+								<span class="slide slide-2">
+									<img src="images/product-2-slide-2.jpg" alt="">
+								</span>
+
+								<span class="slider-switcher">
+									<button class="slider-control active" data-index="1"></button>
+									<button class="slider-control" data-index="2"></button>
+								</span>
+							</span> <!-- end slider -->
+
+							<span class="product-card-description">
+								<h3>Мультиварка PHILIPS Viva Collection HD3136/03</h3>
+
+								<span class="points">+13 баллов</span>
+
+								<span class="price-row no-discount">
+									<span class="price-block">
+										<span class="label">Цена:</span>
+										<span class="value">1587<span class="currency">₼</span></span>
+									</span>
+									<span class="controls-block">
+										<button class="js-add-to-compare"><span class="icon icon-libra"></span></button>
+										<button class="js-add-to-favourites active"><span class="icon icon-heart-o"></span></button>
+									</span>
+								</span>
+							</span>
+
+							<button class="js-add-to-cart btn btn--lilac"><span class="icon icon-basket"></span>Добавить в корзину</button>
+						</a> <!-- end product-card -->
+					</div>
+					
+				</div>
+
+			</div> <!-- end container -->
+		</section>
+
+
+
+		<section class="best-offer">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-md-6">
+						<div class="product-image">
+							<img src="images/nike-label.png" alt="" class="product-label">
+							<img src="images/nike-shoes.png" alt="" class="product-preview">
+						</div>
+					</div>
+
+					<div class="col-12 col-md-6">
+						<div class="product-description">
+							<p>Выгодная покупка!</p>
+							<h3>Кроссовки <br>Nike Air Zoom Vomero</h3>
+							<p>Vomero хорошо подходят бегунам с нейтральной пронацией для длительных тренировок по асфальту. </p>
+							<a href="#" class="btn btn--lilac">Узнать больше</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+
+		<footer class="footer">
+
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+
+						<div class="col-12 col-md-4">
+							<div class="footer-about">
+								<a href="index.html"><img src="images/logo.png" alt="Top Shop"></a>
+								<h4>Online shopping в Баку</h4>
+								<p>Посредством TopShops.az Вы сможете просмотреть, выбрать и заказать практически любой товар с доставкой на дом. Online shopping в интернет магазине TopShops.az это БЫСТРО и УДОБНО</p>
+							</div>
+						</div>
+
+						<div class="col-12 col-md-8">
+							<div class="row">
+								<div class="col-12 col-sm-4">
+									<div class="footer-widget">
+										<h4>Информация</h4>
+
+										<nav class="footer-menu">
+											<ul>
+												<li><a href="news.html">Новости</a></li>
+												<li><a href="about.html">О магазине</a></li>
+												<li><a href="delivery.html">Доставка и Оплата</a></li>
+												<li><a href="point-system.html">Система баллов</a></li>
+												<li><a href="faq.html">Часто задаваемые вопросы</a></li>
+												<li><a href="advertising.html">Реклама</a></li>
+											</ul>
+										</nav>
+									</div> <!-- end footer-widget -->
+								</div>
+								<div class="col-12 col-sm-4">
+									<div class="footer-widget">
+										<h4>Контакты</h4>
+
+										<div class="links-menu">
+											<ul>
+												<li><a href="tel:+994 12 555 54 64"><span class="icon icon-phone"></span>+994 12 555 54 64</a></li>
+												<li><a href="tel:+994 12 555 64 64"><span class="icon icon-phone"></span>+994 12 555 64 64</a></li>
+												<li><a href="tel:+994 55 260 36 49"><span class="icon icon-phone"></span>+994 55 260 36 49</a></li>
+											</ul>
+										</div>
+									</div> <!-- end footer-widget -->
+								</div>
+								<div class="col-12 col-sm-4">
+									<div class="footer-widget">
+										<h4>Социальные сети</h4>
+
+										<div class="links-menu">
+											<ul>
+												<li><a href="#" target="_blank"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i>Facebook</a></li>
+												<li><a href="#" target="_blank"><i class="fa fa-fw fa-instagram" aria-hidden="true"></i>Instagram</a></li>
+												<li><a href="#" target="_blank"><i class="fa fa-fw fa-youtube-play" aria-hidden="true"></i>YouTube</a></li>
+											</ul>
+										</div>
+									</div> <!-- end footer-widget -->
+								</div>
+							</div> <!-- end row -->
+						</div>
+
+					</div> <!-- end row -->
+				</div> <!-- end container -->
+			</div> <!-- end footer-top -->
+
+			<div class="footer-bottom">
+				<div class="footer-container">
+					<div class="row">
+						<div class="col-12 col-md-6 text-md-left text-center">
+							<p>TopShops 2017 © Все права защищены  </p>
+						</div>
+						<div class="col-12 col-md-6 text-md-right text-center">
+							<p>Сделано в <a href="#" target="_blank">Gamidov Studio</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</footer> <!-- end footer -->
+
+		<div id="modal-popup" class="fncb-hide zoom-anim-dialog popup"></div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<script src="js/plugins.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

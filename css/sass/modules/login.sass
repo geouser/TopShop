@@ -1,0 +1,162 @@
+.login-heading
+	background-color: $lilac
+	background: url(../images/lilac-pattern.jpg) 
+	padding: 25px 0 140px
+	position: relative
+	z-index: 2 
+	
+	h1
+		color: #fff
+		font-weight: 700
+		font-size: 48px
+		text-transform: uppercase  
+		margin-top: 15px
+		margin-bottom: 0  
+		
+
+.login-area
+	padding-bottom: 100px
+	margin-top: -100px
+	position: relative
+	z-index: 3
+	
+	& + .footer
+		border-top: 0
+		
+
+.login-box
+	padding: 45px 65px
+	border-top: 10px solid $blue-55
+	background-color: #F1F6FA
+	position: relative
+	
+	&.info-box
+		margin-left: 15px 
+	
+	hr
+		border: 0
+		border-top: 1px solid #D3DEE9
+		position: absolute
+		left: 0
+		width: 100%
+		margin: 0
+	
+
+.info-box
+	padding-bottom: 259px
+	background-image: url(../images/info-box.jpg)
+	background-repeat: no-repeat 
+	background-position: 50% 100%
+	background-size: 100%
+	
+	&.register
+		padding-bottom: 449px
+		 
+		.login-link
+			color: $blue-25
+			font-size: 18px
+			font-weight: 700  
+			text-decoration: underline
+
+	p + ul
+		margin-top: -0.5rem
+		
+	ul
+		li
+			list-style: none 
+
+
+
+
+.alternate-actions
+	padding-top: 15px
+	width: 300px
+	max-width: 100%
+	margin: 0 auto 
+	
+	span
+		display: block
+		margin-bottom: 15px
+		text-align: center
+		font-size: 14px
+		
+	&.register
+		padding-top: 0 
+		padding-bottom: 15px 
+
+	.login-button
+		display: flex
+		padding: 2px
+		border-radius: 4px
+		align-items: center
+		color: #fff
+		
+		&.fb-button
+			background-color: #4267B2
+			margin-bottom: 10px 
+			
+		&.google-button
+			background-color: #4285F4 
+		
+		img
+			width: 40px
+			
+		strong
+			width: -webkit-calc(100% - 40px)
+			width: calc(100% - 40px)
+			text-align: center
+	
+
+
+.login-form
+	padding-bottom: 65px
+	width: 300px
+	max-width: 100%
+	margin: 0 auto 
+	
+	&.registration-form
+		padding-top: 15px
+		padding-bottom: 0 
+		
+		> span
+			display: block
+			margin-bottom: 15px
+			font-size: 14px
+			text-align: center  
+
+	.form-group
+		width: 100%
+		margin-bottom: 20px 
+		
+		&.password
+			.show-password
+				position: absolute
+				bottom: 25px
+				left: 100%
+				margin-left: 10px
+				font-size: 20px
+				color: $text
+				transform: translateY(50%)
+				transition: all 0.3s ease
+				
+				&:hover,
+				&.active
+					color: $blue-55
+					
+				&.active
+					.fa-eye
+						&:before
+							content: '\f070'
+		
+
+	.label
+		display: flex
+		justify-content: space-between
+		align-items: baseline
+		
+		a
+			font-size: 14px
+			text-decoration: underline
+			font-weight: 400  
+			color: $text
+			line-height: normal 

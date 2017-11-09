@@ -1,0 +1,112 @@
+.news-row
+	display: flex
+	align-items: stretch
+	justify-content: flex-start
+	flex-wrap: wrap
+	margin: 0 -15px
+	
+	.news-item
+		width: -webkit-calc(50% - 30px)
+		width: calc(50% - 30px)
+		margin: 0 15px
+		margin-bottom: 25px 
+		
+
+
+.news-item
+	background-color: #F7F4FA 
+	display: flex
+	flex-wrap: wrap
+	
+	.ni-image
+		width: 235px
+		background-size: cover
+		background-repeat: no-repeat 
+		background-position: 50% 50% 
+		
+	.ni-content
+		width: -webkit-calc(100% - 235px)
+		width: calc(100% - 235px)
+		padding: 32px 20px 32px 20px 
+		position: relative
+		
+		h3
+			font-size: 24px
+			color: #C7C5C9
+			line-height: 32px
+			letter-spacing: 0.02em  
+			margin-bottom: 24px 
+			
+			&:hover
+				text-decoration: underline
+				
+			a
+				color: $text
+				text-decoration: none
+				display: block
+				
+				&:hover
+					text-decoration: none
+					
+		p
+			line-height: 24px
+			letter-spacing: 0.02em  
+			margin-bottom: 20px 
+			
+		time
+			position: absolute
+			bottom: 20px
+			right: 20px
+			color: #b4a6bf
+			
+
+.load-more
+	border: 1px dashed $lilac
+	color: $lilac
+	background-color: #fff 
+	width: 260px
+	margin: 50px auto 0 auto
+	display: flex
+	position: relative
+	transition: all 0.3s ease
+	
+	.fa
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-left: -0.64254em 
+		margin-top: -0.5em 
+		opacity: 0
+		visibility: hidden
+		color: #fff
+		
+	&.loading
+		background-color: $lilac
+		border-style: solid
+		opacity: 0.75
+		color: transparent
+		
+		.fa
+			opacity: 1
+			visibility: visible
+			
+
+
+.related-news
+	margin-bottom: -20px 
+	margin-top: 70px
+	border-top: 1px solid #F0E5F8 
+	padding-top: 22px
+	
+	h2
+		color: $lilac
+		font-size: 24px
+		margin-bottom: 22px
+		text-align: center  
+		
+
+	.news-item
+		.ni-content
+			padding-left: 50px
+			padding-right: 50px
+			width: 100%  

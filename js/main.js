@@ -307,6 +307,61 @@ jQuery(document).ready(function($) {
 
 
     /*---------------------------
+                                  Show password
+    ---------------------------*/
+    $('.js-show-password').on('click', function(event) {
+        event.preventDefault();
+        var input = $(this).siblings('input');
+
+        if ( $(this).hasClass('active') ) {
+            input.attr('type', 'password');
+        } else {
+            input.attr('type', 'text');
+        }
+
+        $(this).toggleClass('active');
+    });
+
+
+    /*---------------------------
+                                  Load more button
+    ---------------------------*/
+    $('.load-more').on('click', function(event) {
+        event.preventDefault();
+        $(this).toggleClass('loading');
+        if ( $(this).hasClass('loading') ) {
+            $(this).prop('disabled', true);
+        } else {
+            $(this).prop('disabled', false);
+        }
+    });
+
+
+
+
+
+    /*---------------------------
+                                  Product slider
+    ---------------------------*/
+    $('.product-slider').slick({
+        arrows: true,
+        dots: false,
+        lazyLoad: 'ondemand',
+        infinite: false,
+        fade: true
+    })
+
+    $('.product-thumbnails .thumbnail').on('click', function(event) {
+        event.preventDefault();
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+
+        $('.product-slider').slick( 'slickGoTo', $(this).attr('data-index') );
+    });
+
+
+
+    /*---------------------------
                                   Form submit
     ---------------------------*/
     $('.ajax-form').on('submit', function(event) {
