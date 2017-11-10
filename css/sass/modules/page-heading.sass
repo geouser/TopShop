@@ -1,9 +1,13 @@
 .breadcrumbs
 	padding: 25px 0 15px
+	
+	@media (max-width: 767px)
+		font-size: 14px 
 
 	ul
 		display: flex
 		align-items: center
+		flex-wrap: wrap
 		margin-bottom: 0 
 		
 		li
@@ -31,6 +35,25 @@
 	padding-bottom: 20px
 	background-image: url(../images/white-pattern.png)
 	background-repeat: repeat  
+	
+	img
+		max-width: 100% 
+		display: block
+		
+		@media (max-width: 767px)
+			margin: 0 auto 15px
+			
+	.btn
+		padding: 0 15px
+		width: 100%
+		
+		strong
+			text-align: center
+			width: 100%
+		
+		@media (max-width: 991px)
+			width: auto
+			margin-top: 15px 
 	 
 	h1
 		font-size: 48px
@@ -39,10 +62,26 @@
 		margin-bottom: 0 
 		line-height: normal 
 		
+		@media (max-width: 1199px)
+			font-size: 40px
+			
+		@media (max-width: 991px)
+			font-size: 34px
+			
+		@media (max-width: 767px)
+			font-size: 30px
+			
+		@media (max-width: 575px)
+			font-size: 26px    
+		
 
 	.my-points
 		line-height: normal 
 		text-align: right
+		
+		@media (max-width: 767px)
+			text-align: left
+			margin-top: 15px 
 		
 		p
 			font-weight: 700 
@@ -50,6 +89,9 @@
 			color: $lilac
 			font-size: 24px 
 			margin-bottom: 0 
+			
+			@media (max-width: 1199px)
+				font-size: 20px 
 			
 		a
 			color: $blue-25

@@ -26,6 +26,12 @@
 		min-width: 25% 
 		padding: 12px 15px
 		
+		@media (max-width: 991px)
+			padding: 10px
+			
+		@media (max-width: 767px)
+			min-width: 230px 
+		
 		.price
 			line-height: 24px
 			height: auto  
@@ -42,20 +48,26 @@
 		 
 		.c-desc
 			padding-top: 50px 
+			
+			@media (max-width: 991px)
+				padding-top: 30px 
 		
 
 	.c-body
 		color: $lilac
 		
 		.c-row
-			border-bottom: 1px solid #D9D9D9
-			transition: all 0.3s ease
+			.c-cell
+				transition: all 0.3s ease
+				border-bottom: 1px solid #D9D9D9
 			
 			&:last-child
-				border-bottom: 0
+				.c-cell
+					border-bottom: 0
 							
 			&:hover
-				background-color: #F9F9F9 
+				.c-cell
+					background-color: #F9F9F9 
 		
 
 
@@ -64,6 +76,9 @@
 		padding: 40px 15px
 		display: flex
 		position: relative
+		
+		@media (max-width: 991px)
+			padding: 20px 10px
 		
 		.delete,
 		.cart
@@ -89,12 +104,18 @@
 			transform: translate(50%, -50%)
 			font-size: 14px 
 			
+			@media (max-width: 991px)
+				top: 12px
+			
 		.cart
 			color: $lilac
 			bottom: 15px
 			right: 15px
 			transform: translate(50%, 50%)
 			font-size: 20px 
+			
+			@media (max-width: 991px)
+				font-size: 16px 
 		
 		&__image
 			width: 50px
@@ -112,7 +133,14 @@
 			 	font-size: 16px 
 			 	line-height: normal 
 			 	
+			 	@media (max-width: 991px)
+			 		font-size: 14px
+			 		font-weight: normal  
+			 	
 			.term
+				@media (max-width: 991px)
+					font-size: 14px
+					 
 				span
 					color: #8892bb
 		
@@ -121,6 +149,8 @@
 	display: flex
 	flex-wrap: wrap
 	
+	
+	
 	.title
 		color: #8892bb
 		margin-bottom: 10px 
@@ -128,6 +158,9 @@
 		
 .category-filter
 	margin-bottom: -5px
+
+	@media (max-width: 767px)
+		margin-bottom: 40px 
 
 	.cf-link
 		padding: 2px 15px
@@ -138,6 +171,9 @@
 		text-decoration: none
 		transition: all 0.3s ease
 		margin-bottom: 5px
+		
+		@media (max-width: 991px)
+			font-size: 14px 
 		 
 		&.active
 			border: 1px dashed $lilac
@@ -159,7 +195,19 @@
 		margin-right: 20px
 		margin-bottom: 5px  
 		
+		&:last-child
+			margin-right: 0 
+				
+		@media (max-width: 1199px)
+			margin-right: 10px
+			
+		@media (max-width: 991px)
+			font-size: 14px 
+			
+
+		
 		&:hover,
 		&.active
+			color: $blue-55
 			text-decoration: none
-			border-bottom: 1px solid $lilac
+			border-bottom: 1px solid $blue-55

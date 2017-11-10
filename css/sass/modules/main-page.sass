@@ -20,6 +20,9 @@
 .top-products
 	padding-bottom: 75px 
 	
+	@media (max-width: 1199px)
+		padding-bottom: 50px 
+	
 .products-tabs
 
 	&__controls
@@ -49,6 +52,22 @@
 					color: #fff  
 					border-top: 5px solid transparent
 					transition: all 0.3s ease
+					
+					@media (max-width: 1199px)
+						font-size: 20px
+						width: 220px
+						padding: 15px 0 20px 
+						
+					@media (max-width: 767px)
+						font-size: 16px
+						width: 190px
+						padding: 10px 0
+						border-top-width: 3px 
+						
+					@media (max-width: 575px)
+						width: 140px
+						font-weight: normal 
+						font-size: 15px 
 					
 					&:hover
 						text-decoration: none
@@ -152,6 +171,10 @@
 .selection
 	padding: 50px 0 100px
 	background-color: #F5F6F7 
+	overflow: hidden
+	
+	@media (max-width: 767px)
+		padding-bottom: 50px 
 	
 	h2
 		font-size: 24px
@@ -190,6 +213,123 @@
 		img
 			margin: 0 auto
 			
+	@media (max-width: 1199px)
+		.must-read
+			img
+				width: 340px
+				margin-left: -16px
+				margin-top: -10px  
+				
+		.for-kids
+			img
+				width: 100%
+				
+		.household-appliances
+			img
+				width: 260px
+				
+		.smartphones
+			img
+				width: 310px
+				margin-left: -10px 
+				margin-bottom: -18px 
+				
+		.games
+			img
+				width: 330px
+				margin-left: -12px 
+				
+	@media (max-width: 991px)
+		.must-read
+			img
+				width: 246px
+				margin-left: -10px
+				margin-top: -6px  
+				
+		.for-kids
+			img
+				width: 100%
+				
+		.household-appliances
+			img
+				width: 190px
+				
+		.smartphones
+			img
+				width: 228px
+				margin-left: -8px 
+				margin-bottom: -14px 
+				
+		.games
+			img
+				width: 240px
+				margin-left: -10px 
+				
+	@media (max-width: 767px)
+		.must-read,
+		.for-kids,
+		.household-appliances,
+		.smartphones,
+		.games
+			width: 360px
+			margin: 0 auto
+			
+			img
+				display: block
+				width: auto
+				margin: 0 auto 30px
+				//max-width: 100% 
+				
+		.must-read
+			img
+				margin-left: -18px 
+				
+		.smartphones
+			img
+				margin-left: -10px 
+		
+		.games
+			img
+				margin-left: -15px 
+				
+	@media (max-width: 400px)
+		.must-read,
+		.for-kids,
+		.household-appliances,
+		.smartphones,
+		.games
+			width: 290px
+			margin: 0 auto
+			
+			img
+				display: block
+				width: auto
+				margin: 0 auto 30px
+				//max-width: 100% 
+				
+		.must-read
+			img
+				width: 340px
+				margin-left: -16px
+				
+		.for-kids
+			img
+				width: 100%
+				
+		.household-appliances
+			img
+				width: 260px
+				
+		.smartphones
+			img
+				width: 310px
+				margin-left: -10px 
+				
+		.games
+			img
+				width: 330px
+				margin-left: -12px 
+
 
 	.more-link
 		font-family: $f
@@ -197,3 +337,6 @@
 		text-decoration: underline 
 		position: relative
 		top: -57px
+		
+		@media (max-width: 767px)
+			top: 0

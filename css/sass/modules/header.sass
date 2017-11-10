@@ -2,6 +2,9 @@
 	position: relative
 	z-index: 10 
 	
+	@media (max-width: 1350px)
+		box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75)
+	
 	.header-container
 		width: 1800px
 		max-width: 100%
@@ -11,12 +14,25 @@
 		@media (max-width: 1500px)
 			padding: 0 15px
 			
+		@media (max-width: 991px)
+			width: 720px
+			position: relative
+			
+		@media (max-width: 767px)
+			width: 540px
+			
+		@media (max-width: 575px)
+			width: 100%
+			
 	&-top
 		font-family: $f
 		font-size: 14px
 		color: #fff
 		padding: 9px 0
 		background: linear-gradient(to right, $lilac 0%, $blue-00 100%)
+		
+		@media (max-width: 1350px)
+			display: none
 		
 		.header-container
 			display: flex
@@ -49,6 +65,7 @@
 					background-color: #fff
 					padding: 15px
 					position: absolute
+					z-index: 2 
 					top: 100%
 					right: 0  
 					width: 160px
@@ -106,6 +123,16 @@
 	&-middle
 		padding: 20px 0
 		background-color: #fff
+		position: relative
+		
+		@media (max-width: 1350px)
+			padding: 10px 0
+			
+		@media (max-width: 991px)
+			padding: 10px 0 60px
+			
+		@media (max-width: 575px)
+			padding-bottom: 50px 
 		 
 		.header-container
 			display: flex
@@ -118,9 +145,23 @@
 			width: 315px
 			padding-left: 30px
 			
+			img
+				display: block
+				max-width: 100% 
+			
 			@media (max-width: 1500px)
 				padding-left: 0
 				width: 300px
+				
+			@media (max-width: 1350px)
+				width: 220px
+				
+			@media (max-width: 991px)
+				width: 180px
+				padding-right: 15px 
+				
+			@media (max-width: 575px)
+				width: 120px
 			
 
 		.search
@@ -128,6 +169,23 @@
 			
 			@media (max-width: 1600px)
 				width: 400px
+				
+			@media (max-width: 1350px)
+				width: 350px
+				
+			@media (max-width: 991px)
+				position: absolute
+				bottom: -50px
+				width: 690px
+				left: 15px
+				
+			@media (max-width: 767px)
+				width: 510px
+				
+			@media (max-width: 575px)
+				bottom: -40px
+				width: -webkit-calc(100% - 30px)
+				width: calc(100% - 30px)
 			
 
 		.user-controls
@@ -140,6 +198,14 @@
 			@media (max-width: 1600px)
 				width: -webkit-calc(100% - 700px)
 				width: calc(100% - 700px)
+				
+			@media (max-width: 1350px)
+				width: -webkit-calc(100% - 570px)
+				width: calc(100% - 570px)
+				
+			@media (max-width: 991px)
+				flex: 1 1 auto
+				
 			
 			.user-lists
 				font-size: 14px
@@ -147,15 +213,45 @@
 				
 				@media (max-width: 1600px)
 					padding-right: 20px 
+					
+				@media (max-width: 767px)
+					padding-right: 15px 
+					
+				@media (max-width: 575px)
+					padding-right: 10px 
 				
 			.profile-button
 				padding-left: 40px 
 				
 				@media (max-width: 1600px)
 					padding-left: 20px 
+					
+				@media (max-width: 767px)
+					padding-left: 15px 
+					
+				@media (max-width: 575px)
+					padding-left: 10px 
+				
+
+			.menu-button	
+				margin-left: 20px
+				 
+				@media (min-width: 1351px)
+					display: none
+					
+				@media (max-width: 767px)
+					margin-left: 15px 
+					
+				@media (max-width: 575px)
+					margin-left: 10px 
 	
 	&-bottom
 		background-color: #42205B	
+		
+		@media (max-width: 1350px)
+			display: none
+
+
 
 .site-menu
 	padding-right: 30px
@@ -183,7 +279,25 @@
 			&:hover,
 			&.active
 				text-decoration: underline
-				
+	
+.menu-button
+	background-color: $lilac
+	border-radius: 50% 
+	outline: none
+	
+	&:focus
+		outline: none
+		
+	@media (max-width: 575px)
+		padding: 0!important
+		display: flex
+		padding: 5px 4px !important
+		
+		.hamburger-box
+			transform: scale(0.8)
+
+
+
 
 .search
 	form
@@ -199,6 +313,12 @@
 		font-family: $f
 		font-size: 14px
 		
+		@media (max-width: 1350px)
+			height: 40px
+			
+		@media (max-width: 575px)
+			height: 30px
+		
 		+placeholder
 			opacity: 0.5
 			
@@ -206,6 +326,7 @@
 		width: 50px
 		height: 50px
 		position: absolute
+		padding: 0
 		top: 0
 		right: 0
 		border-radius: 50%
@@ -216,6 +337,30 @@
 		opacity: 0.5 
 		border: 0
 		background-color: transparent
+		text-align: center
+		
+		.icon
+			display: block
+			line-height: normal 
+			
+			&:before
+				display: block
+		
+		@media (max-width: 1350px)
+			width: 40px
+			height: 40px
+			font-size: 18px 
+			
+		@media (max-width: 991px)
+			background-color: $lilac
+			color: #fff 
+			opacity: 1
+			
+		@media (max-width: 575px)
+			width: 30px
+			height: 30px
+			font-size: 16px 
+			
 		
 		&:hover
 			background-color: $lilac
@@ -236,6 +381,12 @@
 			
 			@media (max-width: 1500px)
 				margin-left: 15px 
+				
+			@media (max-width: 767px)
+				margin-left: 8px 
+				
+			@media (max-width: 575px)
+				margin-left: 5px 
 		
 		&:hover,
 		&:hover .icon
@@ -244,6 +395,10 @@
 		
 		span
 			vertical-align: middle 
+			
+		@media (max-width: 1350px)
+			.label
+				display: none
 		
 		.icon
 			color: $blue-25
@@ -254,6 +409,16 @@
 			@media (max-width: 1600px)
 				font-size: 18px
 				margin-right: 4px  
+				
+			@media (max-width: 1350px)
+				margin-right: 0 
+				
+			@media (max-width: 767px)
+				font-size: 16px 
+				
+			@media (max-width: 575px)
+				display: block
+				font-size: 14px 
 			
 
 
@@ -274,6 +439,16 @@
 		padding: 0
 		width: 50px
 		justify-content: center
+		
+	@media (max-width: 1350px)
+		width: 40px
+		height: 40px
+		font-size: 12px 
+		
+	@media (max-width: 575px)
+		width: auto
+		height: auto
+		background-color: transparent 
 	
 	&:hover
 		text-decoration: none
@@ -303,9 +478,23 @@
 				align-items: center
 				justify-content: center
 				font-size: 12px 
+				
+				@media (max-width: 1350px)
+					top: -3px
+					right: -3px
+					
+				@media (max-width: 575px)
+					top: -10px
+					right: -10px
+					width: 16px
+					height: 16px
+					font-size: 10px 
 		
 	.icon
 		font-size: 20px 
+		
+		@media (max-width: 1350px)
+			font-size: 16px 
 		
 
 .profile-button
@@ -319,6 +508,9 @@
 		
 	@media (max-width: 1500px)
 		padding-right: 15px 
+		
+	@media (max-width: 575px)
+		padding-right: 10px 
 	
 	.user-name
 		color: $text
@@ -330,6 +522,9 @@
 		
 		@media (max-width: 1500px)
 			font-size: 14px 
+			
+		@media (max-width: 767px)
+			display: none
 	
 	.user-icon
 		width: 50px
@@ -338,6 +533,14 @@
 		border-radius: 50%
 		position: relative
 		
+		@media (max-width: 1350px)
+			width: 40px
+			height: 40px
+			
+		@media (max-width: 575px)
+			width: 30px
+			height: 30px
+		
 		.icon
 			position: absolute
 			top: 50%
@@ -345,6 +548,12 @@
 			font-size: 20px 
 			transform: translate(-50%, -50%)
 			transition: all 0.3s ease
+			
+			@media (max-width: 1350px)
+				font-size: 16px 
+				
+			@media (max-width: 575px)
+				font-size: 14px 
 			
 	.fa-angle-down
 		position: absolute
@@ -356,3 +565,6 @@
 		@media (max-width: 1500px)
 			right: 0
 			transform: translate(0, -50%)
+			
+		@media (max-width: 575px)
+			font-size: 12px 

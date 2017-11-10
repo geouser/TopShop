@@ -97,6 +97,12 @@
 							<i class="fa fa-angle-down" aria-hidden="true"></i>
 						</a>
 
+						<button class="hamburger hamburger--spin js-toggle-menu menu-button" type="button">
+							<span class="hamburger-box">
+								<span class="hamburger-inner"></span>
+							</span>
+						</button>
+
 					</div>
 
 				</div>
@@ -212,12 +218,134 @@
 		</header> <!-- end header -->
 
 
-		
-		<!--<button class="hamburger hamburger--spin js-toggle-menu menu-button" type="button">
-			<span class="hamburger-box">
-				<span class="hamburger-inner"></span>
-			</span>
-		</button>  -->
+		<div class="mobile-menu">
+
+			<button class="mm-close js-close-mobile-menu"><i class="fa fa-times" aria-hidden="true"></i></button>
+			
+			<div class="mm-numbers">
+				<a href="tel:+994 12 555 54 64"><span class="icon icon-phone"></span>+994 12 555 54 64</a>
+				<a href="tel:+994 12 555 64 64"><span class="icon icon-phone"></span>+994 12 555 64 64</a>
+				<a href="tel:+994 55 260 36 49"><span class="icon icon-phone"></span>+994 55 260 36 49</a>
+			</div>
+
+			<div class="mm-languages">
+				<a href="#">RU</a>
+				<a href="#" class="current">AZ</a>
+			</div>
+
+			<nav class="vertical-menu">
+				<ul>
+					<li>
+						<a href="#">
+							<span class="icon icon-lamp"></span>
+							<span class="label">Электротехника</span>
+							<!-- if menu item has submenu, than add arrow icon -->
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+						</a>
+
+						<ul class="sub-menu">
+							<li><a href="#"><span class="label">Электротехника</span></a></li>
+							<li><a href="#"><span class="label">Электротехника</span></a></li>
+							<li><a href="#"><span class="label">Электротехника</span></a></li>
+							<li><a href="#"><span class="label">Электротехника</span></a></li>
+							<li><a href="#"><span class="label">Электротехника</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">
+							<span class="icon icon-eye"></span>
+							<span class="label">Красота и здоровье</span>
+							<!-- if menu item has submenu, than add arrow icon -->
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="icon icon-moon"></span>
+							<span class="label">Аптека</span>
+							<!-- if menu item has submenu, than add arrow icon -->
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="icon icon-paw"></span>
+							<span class="label">В мире животных</span>
+							<!-- if menu item has submenu, than add arrow icon -->
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="icon icon-home"></span>
+							<span class="label">Все для дома</span>
+							<!-- if menu item has submenu, than add arrow icon -->
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="icon icon-cubes"></span>
+							<span class="label">Детский мир</span>
+							<!-- if menu item has submenu, than add arrow icon -->
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="icon icon-clip"></span>
+							<span class="label">Канцелярские товары</span>
+							<!-- if menu item has submenu, than add arrow icon -->
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="icon icon-book"></span>
+							<span class="label">Книги</span>
+							<!-- if menu item has submenu, than add arrow icon -->
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="icon icon-chair"></span>
+							<span class="label">Мебель</span>
+							<!-- if menu item has submenu, than add arrow icon -->
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="icon icon-t-shirt"></span>
+							<span class="label">Одежда/Обувь</span>
+							<!-- if menu item has submenu, than add arrow icon -->
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="icon icon-star"></span>
+							<span class="label">Показать все</span>
+							<!-- if menu item has submenu, than add arrow icon -->
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<nav class="mm-site-menu">
+				<ul>
+					<li><a href="index.html" class="active">Главная</a></li>
+					<li><a href="news.html">Новости</a></li>
+					<li><a href="about.html">О магазине</a></li>
+					<li><a href="delivery.html">Доставка и Оплата</a></li>
+					<li><a href="point-system.html">Система баллов</a></li>
+					<li><a href="faq.html">Часто задаваемые вопросы</a></li>
+					<li><a href="contacts.html">Контакты</a></li>
+				</ul>
+			</nav>
+		</div> <!-- end mobile-menu -->
 
 
 		<section class="page-heading">
@@ -425,7 +553,7 @@
 
 						<div class="col-12 col-md-8">
 							<div class="row">
-								<div class="col-12 col-sm-4">
+								<div class="col-6 col-sm-4">
 									<div class="footer-widget">
 										<h4>Информация</h4>
 
@@ -441,7 +569,7 @@
 										</nav>
 									</div> <!-- end footer-widget -->
 								</div>
-								<div class="col-12 col-sm-4">
+								<div class="col-6 col-sm-4">
 									<div class="footer-widget">
 										<h4>Контакты</h4>
 

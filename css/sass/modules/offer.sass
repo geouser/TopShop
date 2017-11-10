@@ -1,11 +1,42 @@
 .offer
 	height: 600px
 	position: relative
+	background-color: $lilac-dark 
+	
+	@media (max-width: 1350px)
+		height: 550px
+		
+	@media (max-width: 991px)
+		height: 500px
+		
+	@media (max-width: 767px)
+		height: 400px
+	
+	.vertical-menu
+		position: absolute
+		top: 0
+		height: 100%
+		left: -weblit-calc(50% - 900px)
+		left: calc(50% - 900px)
+		z-index: 2 
+		
+		@media (max-width: 1800px)
+			left: 0
+			
+		@media (max-width: 1350px)
+			display: none
 	
 	&-slider
 		height: 100%
 		margin-bottom: 0!important
 		position: relative 
+		opacity: 0
+		visibility: hidden
+		transition: all 0.5s ease
+		
+		&.loaded
+			opacity: 1
+			visibility: visible
 		
 		.slick-dots
 			position: absolute
@@ -70,11 +101,28 @@
 				width: 1800px
 				max-width: 100% 
 				padding: 0 15px 0 430px
+				margin: 0 auto
+				
+				@media (max-width: 1350px)
+					width: 1170px
+					padding: 0 15px
+					
+				@media (max-width: 1199px)
+					width: 960px
+					
+				@media (max-width: 991px)
+					width: 720px
+					
+				@media (max-width: 767px)
+					width: 540px
 				
 			&-content
 				width: 550px
 				max-width: 100% 
 				line-height: normal
+				
+				@media (max-width: 767px)
+					width: 100%
 				
 				h2
 					font-size: 48px
@@ -82,7 +130,19 @@
 					text-transform: uppercase
 					margin-bottom: 15px
 					
+					@media (max-width: 767px)
+						font-size: 42px 
+						
+					@media (max-width: 575px)
+						font-size: 32px 
+					
 				p
 					font-size: 24px 
 					margin-bottom: 23px 
+					
+					@media (max-width: 767px)
+						font-size: 20px 
+					
+					@media (max-width: 757px)
+						font-size: 18px 
 				

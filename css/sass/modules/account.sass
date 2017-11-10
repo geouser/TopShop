@@ -3,9 +3,13 @@
 	align-items: flex-start
 	flex-wrap: wrap
 	width: 970px
+	max-width: 100% 
 	
 	.user-picture
 		width: 135px
+		
+		@media (max-width: 767px)
+			margin-bottom: 40px 
 		
 		.picture-block
 			width: 100%
@@ -36,6 +40,10 @@
 		width: calc(100% - 135px)
 		padding-left: 60px 
 		
+		@media (max-width: 767px)
+			width: 100%
+			padding-left: 0 
+		
 		.points
 			margin-bottom: 30px 
 		
@@ -45,11 +53,21 @@
 		.actions-row
 			margin: 0 -15px
 			display: flex
+			flex-wrap: wrap
 			margin-bottom: 40px 
 			
 			.column
 				width: 37.5%
 				padding: 0 15px
+				
+				@media (max-width: 991px)
+					width: 50%
+					
+				@media (max-width: 575px)
+					width: 100%
+					
+					&:not(:last-child)
+						margin-bottom: 40px 
 				
 		.change-password
 			padding: 0 15px
@@ -71,9 +89,13 @@
 .address-block
 	h3
 		font-size: 16px
+		
+	address
+		font-size: 18px
+		margin-bottom: 5px  
 		 
 	textarea
-		display: block
+		display: none
 		width: 100%
 		font-size: 18px
 		resize: none
@@ -105,7 +127,11 @@
 			display: none
 			
 	form.active
+		address
+			display: none
+			
 		textarea
+			display: block
 			height: 70px
 			border: 1px solid #eee
 			border-radius: 5px

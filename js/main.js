@@ -90,45 +90,76 @@ jQuery(document).ready(function($) {
     ---------------------------*/
     $('.js-toggle-menu').on('click', function(event) {
         event.preventDefault();
-        $(this).toggleClass('is-active');
-        $(this).siblings('header').toggleClass('open');
+        $('.mobile-menu').toggleClass('open');
+        $('body').toggleClass('menu-open');
+
+        if ( $(this).hasClass('is-active') ) {
+            $('body').css('margin-right', getScrollBarWidth()+'px');   
+        } else {
+            $('body').css('margin-right', '0');   
+        }
+        
     });
+
+    $('.js-close-mobile-menu').on('click', function(event) {
+        event.preventDefault();
+        $('.mobile-menu').removeClass('open');
+        $('body').removeClass('menu-open');
+        $('body').css('margin-right', '0');
+    });
+
+    function getScrollBarWidth () {
+        var inner = document.createElement('p');
+        inner.style.width = "100%";
+        inner.style.height = "200px";
+
+        var outer = document.createElement('div');
+        outer.style.position = "absolute";
+        outer.style.top = "0px";
+        outer.style.left = "0px";
+        outer.style.visibility = "hidden";
+        outer.style.width = "200px";
+        outer.style.height = "150px";
+        outer.style.overflow = "hidden";
+        outer.appendChild (inner);
+
+        document.body.appendChild (outer);
+        var w1 = inner.offsetWidth;
+        outer.style.overflow = 'scroll';
+        var w2 = inner.offsetWidth;
+        if (w1 == w2) w2 = outer.clientWidth;
+
+        document.body.removeChild (outer);
+
+        return (w1 - w2);
+    };
 
 
 
     /*---------------------------
-                                  Fancybox
+                                  Mobile menu
     ---------------------------*/
-    $('.fancybox').fancybox({
+    $('.mobile-menu .vertical-menu a').on('click', function(event) {
+        var submenu = $(this).siblings('.sub-menu');
+
+        if ( submenu.length > 0 ) {
+            event.preventDefault();
+            /* Act on the event */
+            submenu.slideToggle();
+        }
         
     });
 
 
-    /**
-     *
-     * Open popup
-     *
-     * @param popup {String} jQuery object (#popup)
-     *
-     * @return n/a
-     *
-    */
-    function openPopup(popup){
-        $.fancybox.open([
-            {
-                src  : popup,
-                type: 'inline',
-                opts : {}
-            }
-        ], {
-            loop : false
-        });
-    }
 
-
+    
     /*---------------------------
                                   Sliders
     ---------------------------*/
+    $('.offer-slider').on('init', function(event, slick){
+        slick.$slider.addClass('loaded');
+    });
+
     $('.offer-slider').slick({
         fade: true,
         arrows: false,
@@ -166,13 +197,16 @@ jQuery(document).ready(function($) {
     /*---------------------------
                                   Scrollbar
     ---------------------------*/
-    $('.scrollbar').mCustomScrollbar({
-        axis:"x",
-        scrollButtons: {
-            enable: true,
-            scrollAmount: 40
-        }
-    });
+    if ( !window.params.isMobile ) {
+        $('.scrollbar').mCustomScrollbar({
+            axis:"x",
+            scrollButtons: {
+                enable: true,
+                scrollAmount: 40
+            }
+        });    
+    }
+    
 
 
 
@@ -189,6 +223,7 @@ jQuery(document).ready(function($) {
         event.preventDefault();
         // here place ajax function to update address
         $(this).parent('form').removeClass('active').addClass('not-active');
+        $(this).siblings('address').text( $(this).siblings('textarea').val() )
     });
 
 
@@ -240,6 +275,15 @@ jQuery(document).ready(function($) {
         max_input.val( slider.slider( "values", 1 ) );
     });
 
+
+    /*---------------------------
+                                  Toggle filters
+    ---------------------------*/
+    $('.js-toggle-filters').on('click', function(event) {
+        event.preventDefault();
+        $(this).toggleClass('active');
+        $(this).siblings('form').slideToggle();
+    });
 
 
 
@@ -343,6 +387,12 @@ jQuery(document).ready(function($) {
     /*---------------------------
                                   Product slider
     ---------------------------*/
+    // On after slide change
+    $('.product-slider').on('afterChange', function(event, slick, currentSlide){
+        $('.product-thumbnails .thumbnail').removeClass('active');
+        $('.product-thumbnails .thumbnail[data-index="'+currentSlide+'"]').addClass('active')
+    });
+
     $('.product-slider').slick({
         arrows: true,
         dots: false,

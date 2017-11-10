@@ -8,11 +8,18 @@
 	background-color: #F5F6F7
 	font-size: 14px  
 	
+	@media (min-width: 992px)
+		margin-left: -15px 
+		
+	@media (max-width: 991px)
+		margin-bottom: 40px 
+	
 	table
 		width: 100%
 		
 		td:last-child
 			text-align: right
+			white-space: nowrap
 			
 	hr
 		border: 0
@@ -43,6 +50,10 @@
 		font-size: 18px
 		color: #046a95
 		text-decoration: underline
+		
+		@media (max-width: 767px)
+			display: inline-block
+			margin-bottom: 30px 
 		
 		.fa
 			margin-right: 5px 

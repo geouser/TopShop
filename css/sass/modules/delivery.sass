@@ -6,6 +6,9 @@
 	img
 		max-width: 100%
 		display: block 
+		
+		@media (max-width: 991px)
+			margin: 0 auto
 
 	.step
 		width: 580px
@@ -15,8 +18,21 @@
 		margin-bottom: 20px
 		counter-increment: step
 		
+		@media (max-width: 1199px)
+			padding: 20px 45px
+			
+		@media (max-width: 991px)
+			width: 100%
+			padding: 25px 60px
+			
+		@media (max-width: 575px)
+			padding: 20px
+		
 		&:last-child 
 			margin-bottom: 0
+			
+			@media (max-width: 991px)
+				margin-bottom: 50px 
 			
 		h3
 			font-size: 24px
@@ -25,12 +41,26 @@
 			line-height: normal 
 			position: relative
 			
+			@media (max-width: 1199px)
+				font-size: 22px 
+				margin-bottom: 15px 
+				
+			@media (max-width: 575px)
+				font-size: 20px 
+			
 			&:before
 				content: counter(step)"."
 				left: -30px
 				position: absolute
 				color: $blue-55
 				font-weight: 700 
+				
+				@media (max-width: 575px)
+					position: static
+					padding-right: 10px 
+				
+		img
+			margin: 0
 			
 		.icon-headphones
 			font-size: 38px
@@ -40,6 +70,9 @@
 	margin: 70px 0 50px
 	border-left: 4px solid $blue-55
 	padding: 5px 35px 5px 35px
+	
+	@media (max-width: 575px)
+		padding: 5px 15px
 	
 	p
 		margin-bottom: 1.25rem
@@ -79,6 +112,12 @@
 	background-color: #F7F4FA 
 	margin-bottom: 60px 
 	
+	@media (max-width: 1199px)
+		padding: 60px 0
+		
+	@media (max-width: 767px)
+		padding: 40px 0 0
+	
 	h2
 		color: $lilac
 		font-size: 24px 
@@ -88,12 +127,33 @@
 		border-top: 1px solid $blue-55 
 		margin-bottom: 90px 
 		
-	&-item
+		@media (max-width: 1199px)
+			margin-bottom: 60px 
+			
+		@media (max-width: 767px)
+			margin-bottom: 40px 
+		
+	&-item	
+		@media (max-width: 991px)
+			font-size: 14px
+			line-height: normal 
+			
+		@media (max-width: 767px)
+			width: 290px
+			margin-left: auto 
+			margin-right: auto 
+			margin-bottom: 40px 
+			 
 		figure
 			margin: 0 0 35px 0
 			height: 105px
 			display: flex
 			align-items: center
+			
+			@media (max-width: 767px)
+				justify-content: center
+				height: auto
+				margin-bottom: 20px 
 			 
 			img
 				display: block

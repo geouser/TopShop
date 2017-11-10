@@ -1,6 +1,16 @@
 .page-content
 	padding: 40px 0 70px
 	
+	img
+		max-width: 100% 
+		
+	.article-preview
+		max-width: 100%
+		display: block
+		margin-bottom: 1rem
+		margin-left: auto
+		margin-right: auto    
+	
 
 .article
 	width: 945px
@@ -31,7 +41,13 @@
 		
 	time
 		color: #b4a6bf
-	
+		
+	img
+		margin-bottom: 1rem
+		margin-left: auto 
+		margin-right: auto
+		display: block 
+		
 
 .image-block
 	margin-bottom: 1rem
@@ -39,6 +55,11 @@
 	img
 		display: block
 		max-width: 100% 
+		margin-left: auto 
+		margin-right: auto 
+		
+		@media (max-width: 767px)
+			margin-bottom: 1rem 
 		
 
 .quote-block
@@ -51,6 +72,9 @@
 	position: relative
 	background-image: url(../images/lilac-pattern.jpg)
 	background-repeat: repeat  
+	
+	@media (max-width: 991px)
+		padding: 25px
 	
 	&:last-child
 		margin-bottom: 0
@@ -65,6 +89,13 @@
 		font-weight: 700
 		font-size: 24px
 		margin-bottom: 0
+		
+		@media (max-width: 991px)
+			font-size: 22px
+			line-height: normal  
+			
+		@media (max-width: 767px)
+			font-size: 20px 
 		
 		span
 			color: #fff
@@ -96,8 +127,19 @@
 			width: 390px
 			max-width: 100%  
 			
+			@media (max-width: 575px)
+				width: auto
+				margin-right: 85px 
+				
+			
 		img
 			max-width: 240px 
 			position: absolute
 			right: -15px
 			bottom: -15px
+			
+			@media (max-width: 991px)
+				width: 120px
+				
+			@media (max-width: 767px)
+				width: 100px

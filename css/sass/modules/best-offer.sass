@@ -20,6 +20,10 @@
 		color: #fff
 		opacity: 0.15
 		z-index: -1   
+		
+		@media (max-width: 767px)
+			top: 20%
+			left: 75%
 	
 
 
@@ -27,11 +31,16 @@
 		position: relative
 		padding: 85px 0
 		
+		@media (max-width: 767px)
+			padding-bottom: 30px 
+		
 		.product-preview
 			display: block
-			max-width: 420px
+			width: auto
+			max-width: 100%
 			margin: 0 auto 
 			filter: drop-shadow(0 0 80px #fff)
+			
 			
 		.product-label
 			position: absolute
@@ -39,12 +48,26 @@
 			left: 0
 			max-width: 160px 
 			
+			@media (max-width: 991px)
+				max-width: 100px 
+				
+			@media (max-width: 767px)
+				max-width: 140px 
+			
 
 	.product-description
 		padding-top: 40px
 		font-family: $f
 		color: #fff
 		font-size: 18px 
+		
+		@media (max-width: 991px)
+			font-size: 16px
+			padding-top: 20px  
+			
+		@media (max-width: 767px)
+			padding-top: 0
+			text-align: center 
 		
 		p
 			margin-bottom: 0 
@@ -55,6 +78,9 @@
 			line-height: 1.05
 			letter-spacing: 0.02em 
 			margin: 8px 0
+			
+			@media (max-width: 991px)
+				font-size: 26px 
 			
 		.btn
 			font-weight: 700

@@ -3,17 +3,23 @@
 	.container
 		position: relative
 		display: flex
+		flex-wrap: nowrap
+		
+		@media (max-width: 1199px)
+			flex-wrap: wrap
 	
 	.filters
 		width: 25%
-		position: absolute
-		top: 0
-		left: -25% 
+		margin-left: -25% 
 		padding-right: 30px 
 		
 		@media (max-width: 1800px)
-			position: relative
-			left: 0
+			margin-left: 0 
+			
+		@media (max-width: 1199px)
+			width: 100%
+			margin-bottom: 50px 
+			padding-right: 0 
 			
 	.main
 		width: 100%
@@ -28,6 +34,9 @@
 		
 		@media (max-width: 1800px)
 			width: 75%
+			
+		@media (max-width: 1199px)
+			width: 100%
 
 
 
@@ -38,9 +47,43 @@
 		margin-bottom: 30px 
 		padding: 0 15px
 		
+		@media (max-width: 1199px)
+			text-align: center
+			background-color: $lilac
+			font-size: 18px
+			padding: 10px 15px  
+			color: #fff
+			margin-bottom: 0
+			position: relative
+			transition: all 0.3s ease
+			
+			&.active
+				background-color: $blue-25
+				 
+				.fa-angle-down
+					&:before
+						content: '\f106'
+		
 		.fa
 			margin-right: 5px 
 			
+		.fa-angle-down
+			display: none 
+			
+			@media (max-width: 1199px)
+				display: block
+				position: absolute
+				top: 50%
+				right: 15px
+				transform: translateY(-50%)
+			
+	form
+		@media (min-width: 1200px)
+			display: block!important
+			
+		@media (max-width: 1199px)
+			display: none
+			padding-top: 30px 
 
 .filter-group
 	padding: 0 15px 20px
@@ -50,6 +93,9 @@
 	max-width: 100% 
 	position: relative
 	
+	&:last-child
+		border-bottom: 0
+			
 	@media (max-width: 1800px)
 		width: 100%
 	
@@ -84,13 +130,32 @@
 	display: flex
 	align-items: center
 	justify-content: flex-end
+	flex-wrap: wrap
 	margin-bottom: 85px 
+	
+	@media (max-width: 1199px)
+		margin-bottom: 30px 
+		
+	@media (max-width: 767px)
+		justify-content: flex-start
+		
+		.label
+			width: 100%
+			margin-bottom: 4px 
 	
 	.sort-option,
 	.view-option
 		margin-left: 30px
 		color: #313131
 		transition: all 0.2s ease
+		
+		@media (max-width: 991px)
+			font-size: 14px
+			margin-left: 15px  
+			
+		@media (max-width: 767px)
+			margin-left: 0
+			margin-right: 15px  
 		
 		.fa
 			color: #cacaca
@@ -104,6 +169,9 @@
 			.fa
 				color: $blue-25
 				
+	.view-option
+		@media (max-width: 991px)
+			display: none	
 
 	.sort-option
 		.fa
@@ -128,10 +196,16 @@
 	font-weight: 700 
 	text-align: center
 	
+	@media (max-width: 575px)
+		font-size: 18px 
+	
 	.pagination-link
 		color: $text
 		margin: 0 10px
 		transition: all 0.2s ease
+		
+		@media (max-width: 575px)
+			margin: 0 6px
 		
 		&:hover,
 		&.active
@@ -144,6 +218,7 @@
 			color: $text
 			
 
-.list-view
-	.pagination
-		padding-top: 50px 
+@media (min-width: 992px)
+	.list-view
+		.pagination
+			padding-top: 50px 

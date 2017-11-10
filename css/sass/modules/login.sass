@@ -5,6 +5,9 @@
 	position: relative
 	z-index: 2 
 	
+	@media (max-width: 991px)
+		text-align: center
+	
 	h1
 		color: #fff
 		font-weight: 700
@@ -12,6 +15,18 @@
 		text-transform: uppercase  
 		margin-top: 15px
 		margin-bottom: 0  
+		
+		@media (max-width: 1199px)
+			font-size: 40px
+			
+		@media (max-width: 991px)
+			font-size: 34px
+			
+		@media (max-width: 767px)
+			font-size: 30px
+			
+		@media (max-width: 575px)
+			font-size: 26px 
 		
 
 .login-area
@@ -22,6 +37,22 @@
 	min-height: -webkit-calc(100% - 240px) 
 	min-height: calc(100% - 240px) 
 	
+	@media (max-width: 1199px)
+		min-height: -webkit-calc(100% - 228px) 
+		min-height: calc(100% - 229px) 
+		
+	@media (max-width: 991px)
+		min-height: -webkit-calc(100% - 219px) 
+		min-height: calc(100% - 219px) 
+		
+	@media (max-width: 767px)
+		min-height: -webkit-calc(100% - 213px) 
+		min-height: calc(100% - 213px) 
+		
+	@media (max-width: 575px)
+		min-height: -webkit-calc(100% - 207px) 
+		min-height: calc(100% - 207px) 
+	
 	& + .footer
 		border-top: 0
 		
@@ -31,6 +62,18 @@
 	border-top: 10px solid $blue-55
 	background-color: #F1F6FA
 	position: relative
+	
+	@media (max-width: 1199px)
+		padding: 35px 40px
+		
+	@media (max-width: 991px)
+		width: 380px
+		max-width: 100% 
+		margin: 0 auto
+		
+	@media (max-width: 575px)
+		width: 100%
+		padding: 30px 25px
 	
 	&.info-box
 		margin-left: 15px 
@@ -51,8 +94,24 @@
 	background-position: 50% 100%
 	background-size: 100%
 	
+	@media (max-width: 1199px)
+		padding-bottom: 250px 
+		
+	@media (max-width: 991px)
+		width: 100%
+		margin-left: 0!important
+		margin-bottom: 0  
+		padding-bottom: 40%
+		margin-top: 50px 
+	
 	&.register
 		padding-bottom: 449px
+		
+		@media (max-width: 1199px)
+			padding-bottom: 435px 
+			
+		@media (max-width: 991px)
+			padding-bottom: 40% 
 		 
 		.login-link
 			color: $blue-25
@@ -66,6 +125,9 @@
 	ul
 		li
 			list-style: none 
+	
+	.btn
+		padding: 0 20px
 			
 
 
@@ -81,6 +143,10 @@
 	.no-mail
 		text-align: center
 		padding-top: 45px
+		
+		@media (max-width: 575px)
+			.btn
+				padding: 0 25px
 		
 		p:last-child 
 			margin-bottom: 0
@@ -128,6 +194,9 @@
 		align-items: center
 		color: #fff
 		
+		@media (max-width: 575px)
+			font-size: 14px 
+		
 		&.fb-button
 			background-color: #4267B2
 			margin-bottom: 10px 
@@ -138,10 +207,17 @@
 		img
 			width: 40px
 			
+			@media (max-width: 575px)
+				width: 35px
+			
 		strong
 			width: -webkit-calc(100% - 40px)
 			width: calc(100% - 40px)
 			text-align: center
+			
+			@media (max-width: 575px)
+				width: -webkit-calc(100% - 35px)
+				width: calc(100% - 35px)
 	
 
 
@@ -150,6 +226,14 @@
 	width: 300px
 	max-width: 100%
 	margin: 0 auto 
+	
+	@media (max-width: 575px)
+		padding-bottom: 40px 
+		
+	.btn
+		strong
+			width: 100%
+			text-align: center
 	
 	&.registration-form
 		padding-top: 15px
@@ -164,6 +248,9 @@
 
 	&.recover-password
 		padding-bottom: 50px 
+		
+		@media (max-width: 1199px)
+			padding-bottom: 0 
 		
 		> span
 			text-align: center
@@ -191,6 +278,11 @@
 				color: $text
 				transform: translateY(50%)
 				transition: all 0.3s ease
+				
+
+				@media (max-width: 575px)
+					font-size: 16px
+					margin-left: 5px  
 				
 				&:hover,
 				&.active

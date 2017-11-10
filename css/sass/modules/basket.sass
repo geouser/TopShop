@@ -11,6 +11,10 @@
 	background-color: #F5F6F7 
 	margin-bottom: 10px 
 	
+	@media (max-width: 991px)
+		padding: 25px 10px
+		align-items: flex-start
+	
 	+ hr
 		border: 0
 		border-top: 1px solid $lilac
@@ -18,6 +22,7 @@
 	
 	.br-delete
 		width: 35px
+		
 		
 		button
 			color: $red
@@ -77,6 +82,10 @@
 		
 		.term
 			margin-bottom: 8px 
+			
+			@media (max-width: 991px)
+				margin-bottom: 4px
+				 
 			span
 				color: #8892bb
 				
@@ -84,14 +93,88 @@
 			margin-bottom: 0
 			font-size: 20px  
 			
+			@media (max-width: 991px)
+				font-size: 18px
+				line-height: normal  
+			
 	.br-label
 		color: #8892bb
 		margin-bottom: 8px 
 		
+		@media (max-width: 991px)
+			margin-bottom: 4px 
+			
+		@media (max-width: 767px)
+			font-size: 14px
+			margin-bottom: 2px  
+		
+
+	@media (max-width: 991px)
+		.br-delete
+			width: 30px
+			margin-top: 25px 
+			
+		.br-total,
+		.br-count,
+		.br-price
+			width: 33.33%
+			margin-top: 25px 
+			
+		.br-name
+			width: -webkit-calc(100% - 100px)
+			width: calc(100% - 100px)
+			padding-left: 15px 
+			
+		.br-price
+			text-align: left
+			padding-right: 15px 
+			
+		.br-total
+			padding-left: 15px 
+			
+
+	@media (max-width: 767px)
+		.br-total
+			width: 30%
+			padding-left: 10px 
+			
+			.price
+				font-size: 22px 
+				height: normal
+				
+		.br-price
+			width: 40%
+		
+		.br-count
+			width: 30%
+		
+	@media (max-width: 575px)
+		.br-name
+			.term
+				font-size: 14px
+				 
+			.product-title
+				font-size: 16px
+				 
+		.br-total		
+			.price
+				font-size: 20px 
+				
+		.br-price
+			.price
+				font-size: 18px 
+				
+				.discount-price 
+					.discount
+						width: 42px
 
 
 	.br-cart
 		width: 230px
+		
+		@media (max-width: 991px)
+			width: 100%
+			margin-top: 25px 
 		
 		.btn
 			width: 100%
@@ -167,6 +250,11 @@
 		transition: all 0.3s ease 
 		cursor: pointer
 		outline: none
+		padding: 0
+		
+		@media (max-width: 991px)
+			background-color: $lilac
+			color: #fff 
 		
 		&:hover
 			background-color: $lilac
@@ -182,11 +270,19 @@
 .promocodes
 	display: flex
 	align-items: flex-end
+	flex-wrap: wrap
 	
 	.promocode-item
 		width: 33.33%
 		padding-right: 125px
 		position: relative 
+		
+		@media (max-width: 1199px)
+			padding-right: 100px 
+		
+		@media (max-width: 991px)
+			width: 100%
+			margin-bottom: 15px 
 		
 
 .promocode-item
@@ -194,6 +290,10 @@
 		margin-bottom: 5px
 		color: #8892bb
 		line-height: 20px  
+		
+		@media (max-width: 1199px)
+			font-size: 14px
+			line-height: normal  
 		
 	.pi-form
 		position: relative
@@ -229,6 +329,9 @@
 .basket-total
 	text-align: right
 	
+	@media (max-width: 767px)
+		text-align: left
+	
 	.label
 		margin-bottom: 5px
 		color: #8892bb
@@ -254,3 +357,37 @@
 			
 	.btn
 		margin-top: 40px 
+		padding: 0 15px
+		
+		strong
+			text-align: center
+			width: 100%
+		
+		@media (max-width: 767px)
+			margin-top: 20px 
+			
+
+
+
+.favourites
+	.basket-row
+		.br-price
+			@media (max-width: 991px)
+				width: 120px
+				text-align: left
+				margin-top: 0 
+				padding-right: 0
+				padding-left: 10px 
+				
+			@media (max-width: 575px)
+				margin-top: 25px 
+				padding-left: 0 
+				
+				
+		.br-name
+			width: -webkit-calc(100% - 220px)
+			width: calc(100% - 220px)
+			
+			@media (max-width: 575px)
+				width: -webkit-calc(100% - 100px)
+				width: calc(100% - 100px)
