@@ -1,7 +1,0 @@
-.vertical-menu {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  left: -weblit-calc(100% - 900px);
-  left: calc(100% - 900px);
-}
