@@ -26,6 +26,12 @@ function exist(el){
 jQuery(document).ready(function($) {
 
     /*---------------------------
+                                  Focus on search form on page load
+    ---------------------------*/
+    $('.search input').focus();
+
+
+    /*---------------------------
                                   ADD CLASS ON SCROLL
     ---------------------------*/
     $(function() { 
@@ -90,14 +96,15 @@ jQuery(document).ready(function($) {
     ---------------------------*/
     $('.js-toggle-menu').on('click', function(event) {
         event.preventDefault();
+        event.stopPropagation();
         $('.mobile-menu').toggleClass('open');
         $('body').toggleClass('menu-open');
 
-        if ( $(this).hasClass('is-active') ) {
+        /*if ( $(this).hasClass('is-active') ) {
             $('body').css('margin-right', getScrollBarWidth()+'px');   
         } else {
             $('body').css('margin-right', '0');   
-        }
+        }*/
         
     });
 
@@ -134,6 +141,29 @@ jQuery(document).ready(function($) {
         return (w1 - w2);
     };
 
+    $(document).click(function(e) {
+        e.stopPropagation();
+        var container = $(".mobile-menu");
+        if ( !container.is(e.target) && container.has(e.target).length === 0 ) {
+            $('.mobile-menu').removeClass('open');
+            $('body').removeClass('menu-open');
+            $('body').css('margin-right', '0');
+        }
+    });
+
+    if ( window.params.isIOS ) {
+        $(document).on('touchstart', function (e) {
+            var container = $(".mobile-menu");
+            if ( !container.is(e.target) && container.has(e.target).length === 0 ) {
+                $('.mobile-menu').removeClass('open');
+                $('body').removeClass('menu-open');
+                $('body').css('margin-right', '0');
+            }
+        });    
+    }
+    
+
+
 
 
     /*---------------------------
@@ -144,7 +174,6 @@ jQuery(document).ready(function($) {
 
         if ( submenu.length > 0 ) {
             event.preventDefault();
-            /* Act on the event */
             submenu.slideToggle();
         }
         
@@ -157,7 +186,7 @@ jQuery(document).ready(function($) {
                                   Sliders
     ---------------------------*/
     $('.offer-slider').on('init', function(event, slick){
-        slick.$slider.addClass('loaded');
+        $('.offer').addClass('loaded');
     });
 
     $('.offer-slider').slick({
@@ -268,7 +297,11 @@ jQuery(document).ready(function($) {
             values: [ slider.attr('data-min-val')*1, slider.attr('data-max-val')*1 ],
             change: function( event, ui ) {
                 min_input.val(ui.values[0]);
-                max_input.val(ui.values[1])
+                max_input.val(ui.values[1]);
+            },
+            slide: function( event, ui ) {
+                min_input.val(ui.values[0]);
+                max_input.val(ui.values[1]);
             }
         });
         min_input.val( slider.slider( "values", 0 ) );
@@ -300,6 +333,31 @@ jQuery(document).ready(function($) {
             $('.main').addClass('list-view');
         }
     });
+
+
+    /*---------------------------
+                                  Checkout total card fixed on scroll
+    ---------------------------*/
+    if ( $(window).width() >= 1200 ) {
+        $('.total-card').scrollToFixed( {
+            marginTop: 40,
+            limit: function() {
+                var limit = $('.footer').offset().top - $('.total-card').outerHeight(true) - 70;
+                return limit;
+            },
+            postFixed: function() {
+                $(this).addClass('not-fixed');
+            },
+            preFixed: function() {
+                $(this).removeClass('not-fixed');
+                $(this).removeClass('bottom')
+            },
+            preAbsolute: function() {
+                $(this).addClass('bottom')
+            }
+        });    
+    }
+    
 
 
     /*---------------------------

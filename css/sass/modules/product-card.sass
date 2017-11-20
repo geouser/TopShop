@@ -7,7 +7,7 @@
 	color: #3d3d3d
 	position: relative
 	min-height: 358px 
-	transition: filter 0.3s ease
+	transition: filter 0.3s ease, border-color 0.3s ease
 	background-color: #FFF 
 	
 	@media (max-width: 1199px)
@@ -57,25 +57,31 @@
 			display: flex
 			opacity: 0.3
 			transition: all 0.3s ease
+			height: 100%
 			
 			.slider-control
 				margin: 0 1px
-				height: 2px
+				height: 6px
 				flex: 1 1 auto
 				border: 0
-				background-color: #D6DFE0
+				height: 100%
+				background-color: transparent 
+				border-bottom: 2px solid #D6DFE0
 				cursor: auto
 				transition: all 0.3s ease
 				outline: 0
 				
 				&.active
-					background-color: $blue-55 
+					border-bottom: 2px solid $blue-25
 					
 
 	&-description
 		display: block
-		padding: 15px 10px
+		padding: 20px
 		line-height: normal 
+		
+		@media (max-width: 1199px)
+			padding: 15px
 		
 		h3
 			font-size: 14px
@@ -92,50 +98,49 @@
 			font-size: 13px 
 				
 			.price-block
-				.value
-					font-family: $f
-					font-size: 24px
-					font-weight: 700 
-					line-height: 24px 
-					
-					.currency
-						font-size: 18px
+				display: flex
+				align-items: center
+				
+				.price
+					font-size: 24px 
 						
 				.new-price
-					width: 75px
-					height: 38px
+					width: 88px
+					height: 44px
 					display: inline-block
+					vertical-align: middle 
 					background-image: url(../images/golden-ticket.svg)
 					background-repeat: no-repeat 
 					background-position: 50% 50% 
 					background-size: 100%
 					text-align: center
-					padding: 7px 0
+					//padding: 8px 0
+					line-height: 44px 
+					margin-left: 5px 
 					
-					@media (max-width: 767px)
-						width: 60px
-					
-					.value
-						font-size: 18px 
-						
-						@media (max-width: 767px)
-							font-size: 16px 
-						
-						.currency
-							font-size: 16px 
+					@media (max-width: 1199px)
+						width: 80px
 						
 			&.has-discount
-				margin-top: -5px 
+				margin-top: -3px 
 				margin-bottom: -6px
 				 
 				.price-block
-					> .value
-						font-size: 18px
-						text-decoration: line-through 
-						font-weight: 400
+					.price
+						font-size: 21px
+						 
+					> .price
+						position: relative
 						
-						@media (max-width: 767px)
-							font-size: 16px 
+						&:after
+							content: ''
+							width: 100%
+							height: 2px
+							background-color: $text 
+							position: absolute
+							left: 0
+							top: 50%
+							margin-top: -1px 
 
 						
 
@@ -154,9 +159,12 @@
 					background-color: transparent
 					border: 0 
 					color: $blue-55
-					font-size: 16px
+					font-size: 18px
 					cursor: pointer
 					transition: all 0.3s ease
+					
+					@media (max-width: 767px)
+						font-size: 16px 
 					
 					.icon
 						display: block
@@ -193,6 +201,7 @@
 		opacity: 0
 		visibility: hidden
 		transition: all 0.3s ease
+		text-align: center
 		
 		@media (max-width: 1199px)
 			opacity: 1
@@ -210,6 +219,7 @@
 	&:hover
 		color: #3d3d3d
 		text-decoration: none
+		border-color: transparent
 		filter: drop-shadow(0px 0 8px rgba(0, 0, 0, .15))
 		
 		.slider-switcher,

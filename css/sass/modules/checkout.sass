@@ -7,12 +7,23 @@
 	padding: 25px 20px
 	background-color: #F5F6F7
 	font-size: 14px  
-	
+		
 	@media (min-width: 992px)
-		margin-left: -15px 
+		position: absolute
+		left: 0
+		right: 15px
+		&.not-fixed
+			left: 0!important
+			right: 15px!important
+			
+		&.bottom
+			top: auto!important
+			bottom: 0!important
+		
 		
 	@media (max-width: 991px)
 		margin-bottom: 40px 
+		position: static!important
 	
 	table
 		width: 100%

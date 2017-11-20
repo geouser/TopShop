@@ -23,6 +23,7 @@
 			
 		@media (max-width: 575px)
 			width: 100%
+			padding: 0 10px
 			
 	&-top
 		font-family: $f
@@ -58,7 +59,7 @@
 					border: 0
 					line-height: 1 
 					padding: 0
-					border-bottom: 1px dashed #fff
+					border-bottom: 1px solid #fff
 					
 			.phones-container
 				@media (max-width: 1350px)
@@ -84,12 +85,22 @@
 				margin-right: 5px
 				opacity: 0.5  
 				font-size: 12px
+				transition: opacity 0.2s ease
 				
 				@media (max-width: 1350px)
 					opacity: 1
 			
 			a
 				display: inline-block
+				border-bottom: 1px dashed transparent
+				transition: all 0.2s ease
+				
+				&:hover
+					text-decoration: none
+					border-color: #fff
+					
+					.icon
+						opacity: 1
 				
 				@media (max-width: 1350px)
 					display: block
@@ -111,13 +122,15 @@
 			a
 				display: inline-block
 				color: #fff
+				border-bottom: 1px solid transparent
 				
 				& + a
 					margin-left: 15px 
 				
 				&:hover,
 				&.current
-					text-decoration: underline
+					text-decoration: none
+					border-color: #fff
 
 
 	&-middle
@@ -132,11 +145,12 @@
 			padding: 10px 0 60px
 			
 		@media (max-width: 575px)
-			padding-bottom: 50px 
+			padding-bottom: 60px 
 		 
 		.header-container
 			display: flex
 			align-items: center
+			flex-wrap: wrap
 			
 			@media (min-width: 1501px)
 				padding: 0
@@ -161,7 +175,17 @@
 				padding-right: 15px 
 				
 			@media (max-width: 575px)
-				width: 120px
+				width: 110px
+				padding-right: 8px 
+				
+			@media (max-width: 400px)
+				width: 100%
+				padding-right: 0 
+				
+				a
+					width: 150px
+					display: block
+					margin: 0 auto 10px
 			
 
 		.search
@@ -183,9 +207,10 @@
 				width: 510px
 				
 			@media (max-width: 575px)
-				bottom: -40px
-				width: -webkit-calc(100% - 30px)
-				width: calc(100% - 30px)
+				bottom: -50px
+				width: -webkit-calc(100% - 20px)
+				width: calc(100% - 20px)
+				left: 10px
 			
 
 		.user-controls
@@ -206,6 +231,11 @@
 			@media (max-width: 991px)
 				flex: 1 1 auto
 				
+			@media (max-width: 400px)
+				width: 100%
+				justify-content: center
+				padding: 15px 0
+				
 			
 			.user-lists
 				font-size: 14px
@@ -218,7 +248,7 @@
 					padding-right: 15px 
 					
 				@media (max-width: 575px)
-					padding-right: 10px 
+					padding-right: 8px 
 				
 			.profile-button
 				padding-left: 40px 
@@ -230,7 +260,7 @@
 					padding-left: 15px 
 					
 				@media (max-width: 575px)
-					padding-left: 10px 
+					padding-left: 8px 
 				
 
 			.menu-button	
@@ -243,7 +273,12 @@
 					margin-left: 15px 
 					
 				@media (max-width: 575px)
-					margin-left: 10px 
+					margin-left: 8px 
+					
+				@media (max-width: 400px)
+					position: absolute
+					top: 0
+					right: 10px
 	
 	&-bottom
 		background-color: #42205B	
@@ -275,10 +310,17 @@
 		
 		a
 			color: #fff
+			border-bottom: 1px solid transparent
+			transition: all 0.2s ease
 			
 			&:hover,
 			&.active
-				text-decoration: underline
+				text-decoration: none
+				color: #b18fff
+				border-bottom-color: #b18fff
+				
+			&.active
+				border-color: transparent
 	
 .menu-button
 	background-color: $lilac
@@ -289,12 +331,12 @@
 		outline: none
 		
 	@media (max-width: 575px)
-		padding: 0!important
+		//padding: 0!important
 		display: flex
-		padding: 5px 4px !important
+		//padding: 5px 4px !important
 		
 		.hamburger-box
-			transform: scale(0.8)
+			//transform: scale(0.8)
 
 
 
@@ -317,7 +359,7 @@
 			height: 40px
 			
 		@media (max-width: 575px)
-			height: 30px
+			height: 40px
 		
 		+placeholder
 			opacity: 0.5
@@ -352,14 +394,7 @@
 			font-size: 18px 
 			
 		@media (max-width: 991px)
-			background-color: $lilac
-			color: #fff 
 			opacity: 1
-			
-		@media (max-width: 575px)
-			width: 30px
-			height: 30px
-			font-size: 16px 
 			
 		
 		&:hover
@@ -373,17 +408,24 @@
 		color: $text
 		transition: all 0.3s ease
 		
+		@media (max-width: 767px)
+			width: 40px
+			height: 40px
+			border: 1px dashed $blue-55
+			border-radius: 50%
+			display: inline-flex
+			align-items: center
+			justify-content: center
+			
+		@media (max-width: 575px)
+			//width: 30px
+			//height: 30px
+		
 		& + a
-			margin-left: 30px 
-			
-			@media (max-width: 1600px)
-				margin-left: 20px 
-			
-			@media (max-width: 1500px)
-				margin-left: 15px 
+			margin-left: 15px 
 				
 			@media (max-width: 767px)
-				margin-left: 8px 
+				margin-left: 11px 
 				
 			@media (max-width: 575px)
 				margin-left: 5px 
@@ -391,7 +433,7 @@
 		&:hover,
 		&:hover .icon
 			text-decoration: none
-			color: $blue-00
+			color: $lilac
 		
 		span
 			vertical-align: middle 
@@ -418,7 +460,7 @@
 				
 			@media (max-width: 575px)
 				display: block
-				font-size: 14px 
+				//font-size: 12px 
 			
 
 
@@ -446,14 +488,15 @@
 		font-size: 12px 
 		
 	@media (max-width: 575px)
-		width: auto
-		height: auto
+		//width: 30px
+		//height: 30px
 		background-color: transparent 
+		border: 1px dashed $lilac
 	
 	&:hover
 		text-decoration: none
 		color: #fff
-		background-color: $lilac
+		background-color: #5b01a0!important
 	
 	.counter
 		white-space: nowrap
@@ -484,10 +527,11 @@
 					right: -3px
 					
 				@media (max-width: 575px)
-					top: -10px
-					right: -10px
+					top: -5px
+					right: -5px
 					width: 16px
 					height: 16px
+					line-height: 16px 
 					font-size: 10px 
 		
 	.icon
@@ -495,6 +539,9 @@
 		
 		@media (max-width: 1350px)
 			font-size: 16px 
+			
+		@media (max-width: 575px)
+			//font-size: 12px 
 		
 
 .profile-button
@@ -509,8 +556,8 @@
 	@media (max-width: 1500px)
 		padding-right: 15px 
 		
-	@media (max-width: 575px)
-		padding-right: 10px 
+	@media (max-width: 767px)
+		padding-right: 0
 	
 	.user-name
 		color: $text
@@ -531,15 +578,19 @@
 		height: 50px
 		border: 1px dashed $blue-55
 		border-radius: 50%
+		overflow: hidden
 		position: relative
+		background-position: 50% 50%
+		background-repeat: no-repeat 
+		background-size: cover 
 		
 		@media (max-width: 1350px)
 			width: 40px
 			height: 40px
 			
 		@media (max-width: 575px)
-			width: 30px
-			height: 30px
+			//width: 30px
+			//height: 30px
 		
 		.icon
 			position: absolute
@@ -553,7 +604,7 @@
 				font-size: 16px 
 				
 			@media (max-width: 575px)
-				font-size: 14px 
+				//font-size: 12px 
 			
 	.fa-angle-down
 		position: absolute
@@ -566,5 +617,5 @@
 			right: 0
 			transform: translate(0, -50%)
 			
-		@media (max-width: 575px)
-			font-size: 12px 
+		@media (max-width: 767px)
+			display: none

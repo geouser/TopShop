@@ -1,3 +1,12 @@
+.main-page
+	.basket-link
+		background-color: $lilac
+		color: #fff
+		
+		@media (max-width: 1500px)
+			.number
+				background-color: $blue-55 
+
 .new-arrivals
 	padding: 55px 0 45px
 	
@@ -334,9 +343,12 @@
 	.more-link
 		font-family: $f
 		color: $lilac
-		text-decoration: underline 
+		border-bottom: 1px solid $lilac
 		position: relative
 		top: -57px
+		
+		&:hover
+			text-decoration: none
 		
 		@media (max-width: 767px)
 			top: 0

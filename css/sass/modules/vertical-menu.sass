@@ -76,20 +76,24 @@
 					font-size: 12px 
 					
 			.label
-				border-bottom: 1px dashed transparent
+				//border-bottom: 1px dashed transparent
 				transition: all 0.3s ease
 				
 			&:hover
 				text-decoration: none
 				
 				.label
-					border-bottom: 1px dashed $lilac
+					//border-bottom: 1px dashed $lilac
 				
 		&:first-child
 			> a:before
 				display: none	
 				
 		&:last-child
+			> a
+				.label
+					border-bottom: 1px dashed $lilac
+					
 			> a:after
 				display: none		
 
